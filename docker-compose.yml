@@ -9,12 +9,9 @@ services:
   # DSpace (backend) webapp container
   api:
     container_name: api
+    env_file:
+      - .env
     environment:
-      # Below syntax may look odd, but it is how to override dspace.cfg settings via env variables.
-      # See https://github.com/DSpace/DSpace/blob/main/dspace/config/config-definition.xml
-      # __P__ => "." (e.g. dspace__P__dir => dspace.dir)
-      # __D__ => "-" (e.g. google__D__metadata => google-metadata)
-      # dspace.dir: Must match with Dockerfile's DSPACE_INSTALL directory.
       dspace__P__dir: /dspace
       # Uncomment to set a non-default value for dspace.server.url or dspace.ui.url
       # dspace__P__server__P__url: http://localhost:8080/server
@@ -35,6 +32,8 @@ services:
     build:
       context: ./api
       dockerfile: Dockerfile
+      args:
+        DSPACE_VERSION: ${DSPACE_VERSION}
     depends_on:
     - dspacedb
     - dspacesolr
@@ -57,6 +56,14 @@ services:
     # 1. While a TCP connection to dspacedb port 5432 is not available, continue to sleep
     # 2. Then, run database migration to init database tables
     # 3. Finally, start DSpace
+    # entrypoint:
+    # - /bin/bash
+    # - '-c'
+    # - |
+    #   while (!</dev/tcp/dspacedb/5432) > /dev/null 2>&1; do sleep 1; done;
+    #   /dspace/bin/dspace database migrate || echo "migration failed";
+    #   java -jar /dspace/webapps/server-boot.jar --dspace.dir=/dspace || echo "server failed";
+    #   tail -f /dev/null
     entrypoint:
     - /bin/bash
     - '-c'
