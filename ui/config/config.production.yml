@@ -1,0 +1,5 @@
+rest:
+  ssl: true
+  host: ri.inpa.gov.br
+  port: 443
+  nameSpace: /server
