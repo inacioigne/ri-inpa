@@ -147,6 +147,35 @@ services:
       cp -r /opt/solr/server/solr/configsets/suggestion/* suggestion
       chown -R solr:solr /var/solr
       runuser -u solr -- solr-foreground
+
+  # DSpace Angular UI container
+  ui:
+    container_name: ui
+    environment:
+      DSPACE_UI_SSL: 'false'
+      DSPACE_UI_HOST: ui
+      DSPACE_UI_PORT: '4000'
+      DSPACE_UI_NAMESPACE: /
+      # NOTE: When running the UI in production mode (which the -dist image does),
+      # these DSPACE_REST_* variables MUST point at a public, HTTPS URL.
+      # This is because Server Side Rendering (SSR) currently requires a public URL,
+      # see this bug: https://github.com/DSpace/dspace-angular/issues/1485
+      DSPACE_REST_SSL: 'true'
+      DSPACE_REST_HOST: ri-api.inpa.gov.br
+      DSPACE_REST_PORT: 443
+      DSPACE_REST_NAMESPACE: /server
+    image: "inpa/angular:9.0-dist"
+    build:
+      context: ./ui
+      dockerfile: Dockerfile.dist
+    networks:
+      dspacenet:
+    ports:
+    - published: 4000
+      target: 4000
+    stdin_open: true
+    tty: true
+
 volumes:
   assetstore:
   pgdata:
