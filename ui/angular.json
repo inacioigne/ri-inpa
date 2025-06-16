@@ -54,6 +54,16 @@
                 "inject": false,
                 "bundleName": "inpa-theme"
               },
+              {
+                "input": "src/themes/inpa_bha/styles/theme.scss",
+                "inject": false,
+                "bundleName": "inpa_bha-theme"
+              },
+              {
+                "input": "src/themes/inpa_bha_col/styles/theme.scss",
+                "inject": false,
+                "bundleName": "inpa_bha_col-theme"
+              },
               "node_modules/leaflet/dist/leaflet.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.css"
