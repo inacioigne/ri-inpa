@@ -3,3 +3,10 @@ rest:
   host: ri-api.inpa.gov.br
   port: 443
   nameSpace: /server
+
+themes:
+  # - name: inpa_bha
+  #   extends: inpa
+  #   handle: 1/38510
+
+  - name: inpa

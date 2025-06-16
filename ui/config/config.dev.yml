@@ -5,5 +5,10 @@ rest:
   nameSpace: /server
 
 # Theme Config
+
 themes:
+  - name: inpa_bha
+    extends: inpa
+    handle: 1/38510
+
   - name: inpa
