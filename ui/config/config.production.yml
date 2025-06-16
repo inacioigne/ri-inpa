@@ -1,5 +1,5 @@
 rest:
   ssl: true
-  host: ri.inpa.gov.br
+  host: ri-api.inpa.gov.br
   port: 443
   nameSpace: /server

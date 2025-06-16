@@ -1,0 +1,9 @@
+rest:
+  ssl: true
+  host: ri-api.inpa.gov.br
+  port: 443
+  nameSpace: /server
+
+# Theme Config
+themes:
+  - name: inpa
