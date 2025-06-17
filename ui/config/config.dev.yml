@@ -7,7 +7,11 @@ rest:
 # Theme Config
 
 themes:
-  - name: inpa_bha_col
+  - name: inpa_bha_col_es
+    extends: inpa
+    handle: 1/40049
+
+  - name: inpa_bha_col_pt
     extends: inpa
     handle: 1/40046
 

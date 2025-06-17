@@ -60,7 +60,7 @@
                 "bundleName": "inpa_bha-theme"
               },
               {
-                "input": "src/themes/inpa_bha_col/styles/theme.scss",
+                "input": "src/themes/inpa_bha_col_pt/styles/theme.scss",
                 "inject": false,
                 "bundleName": "inpa_bha_col-theme"
               },
