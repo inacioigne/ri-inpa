@@ -4,9 +4,14 @@ rest:
   port: 443
   nameSpace: /server
 
-# Theme Config
+defaultLanguage: pt-BR
 
+# Theme Config
 themes:
+  - name: inpa_bha_col_en
+    extends: inpa
+    handle: 1/40044
+
   - name: inpa_bha_col_es
     extends: inpa
     handle: 1/40049
