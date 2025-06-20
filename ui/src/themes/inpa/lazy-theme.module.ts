@@ -15,9 +15,14 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { RootModule } from '../../app/root.module';
 import { HomePageComponent } from './app/home-page/home-page.component';
+import { ItemPageComponent } from './app/item-page/simple/item-page.component';
+import { MetadataRepresentationListComponent } from './app/item-page/simple/metadata-representation-list/metadata-representation-list.component';
 
 const DECLARATIONS = [
   HomePageComponent,
+  ItemPageComponent,
+  MetadataRepresentationListComponent
+
 ];
 
 @NgModule({

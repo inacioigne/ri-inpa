@@ -62,7 +62,17 @@
               {
                 "input": "src/themes/inpa_bha_col_pt/styles/theme.scss",
                 "inject": false,
-                "bundleName": "inpa_bha_col-theme"
+                "bundleName": "inpa_bha_col_pt-theme"
+              },
+              {
+                "input": "src/themes/inpa_bha_col_es/styles/theme.scss",
+                "inject": false,
+                "bundleName": "inpa_bha_col_es-theme"
+              },
+              {
+                "input": "src/themes/inpa_bha_col_en/styles/theme.scss",
+                "inject": false,
+                "bundleName": "inpa_bha_col_en-theme"
               },
               "node_modules/leaflet/dist/leaflet.css",
               "node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css",

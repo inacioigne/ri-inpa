@@ -151,4 +151,17 @@ export class MetadataValuesComponent implements OnChanges {
       return { target: '_blank', rel: 'noopener noreferrer' };
     }
   }
+
+  // Padroniza a data para o formato brasileiro (dd/mm/aaaa)
+  // Se não for uma data válida, retorna o valor original
+  isDate(value: string): string {
+
+  const date = new Date(value);
+  if (isNaN(date.getTime())) {
+    return value.trim() // Não é uma data válida
+  }
+
+  // Formata para o padrão brasileiro: dd/mm/aaaa
+  return date.toLocaleDateString('pt-BR');
+}
 }
