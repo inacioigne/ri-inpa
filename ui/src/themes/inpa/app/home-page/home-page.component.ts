@@ -43,5 +43,11 @@ export class HomePageComponent extends BaseComponent {
       link: '/communities/63a339c3-3ea5-4dce-8b21-d1d0c8d88693',
       image: 'assets/inpa/images/collections/clima-amazonia.png',
       title: 'Boletim de Monitoramento Climático de Grandes Bacias Hidrográficas',
-    }]
+    },
+    {
+      link: '/collections/6b1997ea-f80f-4255-bb60-0e7b3e3231af',
+      image: 'assets/inpa/images/collections/editora-inpa.png',
+      title: 'Editora INPA',
+    }
+  ]
 }

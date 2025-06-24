@@ -25,3 +25,9 @@ themes:
     handle: 1/38510
 
   - name: inpa
+
+info:
+  enableEndUserAgreement: true
+  enablePrivacyStatement: true
+  enableCOARNotifySupport: false
+  enableCookieConsentPopup: true
