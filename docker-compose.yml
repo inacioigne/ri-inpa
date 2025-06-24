@@ -13,21 +13,13 @@ services:
       - .env
     environment:
       dspace__P__dir: /dspace
-      # Uncomment to set a non-default value for dspace.server.url or dspace.ui.url
-      # dspace__P__server__P__url: http://localhost:8080/server
-      # dspace__P__ui__P__url: http://localhost:4000
       dspace__P__name: 'RI INPA'
-      # db.url: Ensure we are using the 'dspacedb' image for our database
       db__P__url: 'jdbc:postgresql://dspacedb:5432/dspace'
-      # solr.server: Ensure we are using the 'dspacesolr' image for Solr
       solr__P__server: http://dspacesolr:8983/solr
-      # matomo.tracker.url: Ensure we are using the 'matomo' image for Matomo
       matomo__P__tracker__P__url: http://matomo
-      # proxies.trusted.ipranges: This setting is required for a REST API running in Docker to trust requests
-      # from the host machine. This IP range MUST correspond to the 'dspacenet' subnet defined above.
       proxies__P__trusted__P__ipranges: '172.23.0'
       LOGGING_CONFIG: /dspace/config/log4j2-container.xml
-    # image: "${DOCKER_REGISTRY:-docker.io}/${DOCKER_OWNER:-dspace}/dspace:${DSPACE_VER:-latest-test}"
+      TZ: America/Manaus
     image: "inpa/api:9.0"
     build:
       context: ./api
@@ -87,6 +79,7 @@ services:
     environment:
       PGDATA: /pgdata
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      TZ: America/Manaus
     networks:
       dspacenet:
     ports:
@@ -101,6 +94,8 @@ services:
   dspacesolr:
     container_name: dspacesolr
     image: "inpa/dspacesolr:9.0"
+    environment:
+      TZ: America/Manaus
     build:
       context: ./api/dspace/src/main/docker/dspace-solr/
       # Provide path to Solr configs necessary to build Docker image
@@ -156,14 +151,11 @@ services:
       DSPACE_UI_HOST: ui
       DSPACE_UI_PORT: '4000'
       DSPACE_UI_NAMESPACE: /
-      # NOTE: When running the UI in production mode (which the -dist image does),
-      # these DSPACE_REST_* variables MUST point at a public, HTTPS URL.
-      # This is because Server Side Rendering (SSR) currently requires a public URL,
-      # see this bug: https://github.com/DSpace/dspace-angular/issues/1485
       DSPACE_REST_SSL: 'true'
       DSPACE_REST_HOST: ri-api.inpa.gov.br
       DSPACE_REST_PORT: 443
       DSPACE_REST_NAMESPACE: /server
+      TZ: America/Manaus
     image: "inpa/angular:9.0-dist"
     build:
       context: ./ui
