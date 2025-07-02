@@ -102,7 +102,7 @@
                     <dc-qualifier>co-advisor</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Coorientador</label>
-                    <input-type>name</input-type>
+                    <input-type>onebox</input-type>
                     <type-bind>Pibic, Tese, Dissertação</type-bind>
                     <hint>Entre com o nome do coorientador</hint>
                     <required></required>
@@ -1545,44 +1545,36 @@
 
         <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
             <pair>
-                <displayed-value>English</displayed-value>
-                <stored-value>en</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Spanish</displayed-value>
-                <stored-value>es</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>German</displayed-value>
-                <stored-value>de</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>French</displayed-value>
-                <stored-value>fr</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Italian</displayed-value>
-                <stored-value>it</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Japanese</displayed-value>
-                <stored-value>ja</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Chinese</displayed-value>
-                <stored-value>zh</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Portuguese</displayed-value>
+                <displayed-value>Português</displayed-value>
                 <stored-value>pt_BR</stored-value>
             </pair>
             <pair>
-                <displayed-value>Turkish</displayed-value>
-                <stored-value>tr</stored-value>
+                <displayed-value>Inglês</displayed-value>
+                <stored-value>en</stored-value>
             </pair>
             <pair>
-                <displayed-value>(Other)</displayed-value>
-                <stored-value>other</stored-value>
+                <displayed-value>Espanhol</displayed-value>
+                <stored-value>es</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Alemão</displayed-value>
+                <stored-value>de</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Francês</displayed-value>
+                <stored-value>fr</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Italiano</displayed-value>
+                <stored-value>it</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Japonês</displayed-value>
+                <stored-value>ja</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Chinês</displayed-value>
+                <stored-value>zh</stored-value>
             </pair>
         </value-pairs>
 
