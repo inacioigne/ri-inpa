@@ -68,12 +68,12 @@
             <processing-class>org.dspace.app.rest.submit.step.UploadStep</processing-class>
             <type>upload</type>
         </step-definition>
-        <!-- <step-definition id="license">
+        <step-definition id="license">
             <heading>submit.progressbar.license</heading>
             <processing-class>org.dspace.app.rest.submit.step.LicenseStep</processing-class>
             <type>license</type>
             <scope visibilityOutside="read-only">submission</scope>
-        </step-definition> -->
+        </step-definition>
 
         <!-- This optional step may allow the user to select a Creative Commons license -->
         <step-definition id="cclicense" mandatory="false">
@@ -214,10 +214,10 @@
             <!-- <step id="extractionstep"/> -->
 
             <!-- Uncomment this step to allow the user to select a Creative Commons License -->
-            <!-- <step id="cclicense"/> -->
+            <step id="cclicense"/>
 
             <!--Step will be to Sign off on the required DSpace License agreement -->
-            <step id="license"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!--
