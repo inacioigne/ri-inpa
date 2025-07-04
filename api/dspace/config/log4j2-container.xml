@@ -27,6 +27,28 @@
     </Appenders>
 
     <Loggers>
+        <!-- Logs detalhados da API REST e upload -->
+        <Logger name="org.dspace.app.rest" level="DEBUG" additivity="false">
+        <AppenderRef ref="A1"/>
+        </Logger>
+        <Logger name="org.dspace.app.rest.filter" level="DEBUG" additivity="false">
+        <AppenderRef ref="A1"/>
+        </Logger>
+        <Logger name="org.dspace.content" level="DEBUG" additivity="false">
+        <AppenderRef ref="A1"/>
+        </Logger>
+        <Logger name="org.dspace.authorize" level="DEBUG" additivity="false">
+        <AppenderRef ref="A1"/>
+        </Logger>
+        <Logger name="org.springframework.web" level="DEBUG" additivity="false">
+        <AppenderRef ref="A1"/>
+        </Logger>
+        <Logger name="org.springframework.security" level="DEBUG" additivity="false">
+        <AppenderRef ref="A1"/>
+        </Logger>
+        <Logger name="org.springframework.web.filter" level="DEBUG" additivity="false">
+        <AppenderRef ref="A1"/>
+        </Logger>
 
         <!-- Most parts of DSpace -->
         <Logger name='org.dspace'
