@@ -27,7 +27,7 @@
     </Appenders>
 
     <Loggers>
-        <!-- Logs detalhados da API REST e upload -->
+        <!-- Logs detalhados da API REST e upload
         <Logger name="org.dspace.app.rest" level="DEBUG" additivity="false">
         <AppenderRef ref="A1"/>
         </Logger>
@@ -48,7 +48,7 @@
         </Logger>
         <Logger name="org.springframework.web.filter" level="DEBUG" additivity="false">
         <AppenderRef ref="A1"/>
-        </Logger>
+        </Logger> -->
 
         <!-- Most parts of DSpace -->
         <Logger name='org.dspace'
