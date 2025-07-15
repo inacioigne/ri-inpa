@@ -19,7 +19,6 @@ import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/th
 @Component({
   selector: 'ds-themed-home-page',
   styleUrls: ['./home-page.component.scss'],
-  // styleUrls: ['../../../../app/home-page/home-page.component.scss'],
   templateUrl: './home-page.component.html',
   standalone: true,
   imports: [
@@ -48,6 +47,11 @@ export class HomePageComponent extends BaseComponent {
       link: '/collections/6b1997ea-f80f-4255-bb60-0e7b3e3231af',
       image: 'assets/inpa/images/collections/editora-inpa.png',
       title: 'Editora INPA',
+    },
+     {
+      link: '/communities/4e233432-fbd0-4db3-b822-74ad31b0e819',
+      image: 'assets/inpa/images/collections/tede.png',
+      title: 'Tese & Dissertação',
     }
   ]
 }

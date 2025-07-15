@@ -152,16 +152,15 @@ export class MetadataValuesComponent implements OnChanges {
     }
   }
 
-  // Padroniza a data para o formato brasileiro (dd/mm/aaaa)
-  // Se não for uma data válida, retorna o valor original
-  isDate(value: string): string {
-
-  const date = new Date(value);
-  if (isNaN(date.getTime())) {
-    return value.trim() // Não é uma data válida
+ 
+ isDate(value: string): string {
+  const regex = /^\d{4}-\d{2}-\d{2}$/;
+  if (regex.test(value)) {
+    const [year, month, day] = value.split("-");
+    return `${day}/${month}/${year}`;
   }
 
-  // Formata para o padrão brasileiro: dd/mm/aaaa
-  return date.toLocaleDateString('pt-BR');
+  return value.trim();
 }
+
 }
