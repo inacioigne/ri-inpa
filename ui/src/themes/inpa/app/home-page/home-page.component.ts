@@ -50,7 +50,7 @@ export class HomePageComponent extends BaseComponent {
     },
      {
       link: '/communities/4e233432-fbd0-4db3-b822-74ad31b0e819',
-      image: 'assets/inpa/images/collections/tede.png',
+      image: 'assets/inpa/images/collections/tede.jpg',
       title: 'Tese & Dissertação',
     }
   ]
