@@ -143,8 +143,8 @@ services:
     image: "inpa/angular:${DSPACE_VERSION}"
     build:
       context: ./ui
-      # dockerfile: Dockerfile.dist
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dist
+      # dockerfile: Dockerfile
     networks:
       dspacenet:
     ports:
