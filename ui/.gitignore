@@ -31,6 +31,7 @@ morgan.log
 # Yarn no longer used
 yarn.lock
 yarn-error.log
+package-lock.json
 
 *.css
 
