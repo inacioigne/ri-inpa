@@ -12,7 +12,7 @@ services:
     environment:
       dspace__P__dir: /dspace
       dspace__P__name: 'RI INPA'
-      dspace__P__server__P__url: 'https://repositorio.inpa.gov.br/server'
+      dspace__P__server__P__url: 'https://ri.inpa.gov.br/server'
       db__P__url: 'jdbc:postgresql://dspacedb:5432/dspace'
       solr__P__server: http://dspacesolr:8983/solr
       proxies__P__trusted__P__ipranges: '172.23.0'
