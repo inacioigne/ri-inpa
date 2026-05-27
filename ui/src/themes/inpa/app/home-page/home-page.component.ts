@@ -15,8 +15,8 @@ import { ThemedSearchFormComponent } from '../../../../app/shared/search-form/th
   selector: 'ds-themed-home-page',
   // styleUrls: ['./home-page.component.scss'],
   styleUrls: ['../../../../app/home-page/home-page.component.scss'],
-  // templateUrl: './home-page.component.html'
-  templateUrl: '../../../../app/home-page/home-page.component.html',
+  templateUrl: './home-page.component.html',
+  // templateUrl: '../../../../app/home-page/home-page.component.html',
   imports: [
     HomeCoarComponent,
     NgTemplateOutlet,
