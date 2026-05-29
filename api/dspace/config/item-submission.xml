@@ -305,10 +305,10 @@
             <!-- <step id="extractionstep"/> -->
 
             <!-- Uncomment this step to allow the user to select a Creative Commons License -->
-            <!-- <step id="cclicense"/> -->
+            <step id="cclicense"/>
 
             <!--Step will be to Sign off on the required DSpace License agreement -->
-            <step id="license"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!--
@@ -323,7 +323,8 @@
             <step id="publicationStep"/>
             <step id="traditionalpagetwo"/>
             <step id="upload"/>
-            <step id="license"/>
+            <!-- <step id="license"/> -->
+            <step id="cclicense"/>
         </submission-process>
 
         <!--
@@ -334,7 +335,7 @@
             <step id="collection"/>
             <step id="personStep"/>
             <step id="upload"/>
-            <step id="license"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!--

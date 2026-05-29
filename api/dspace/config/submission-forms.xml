@@ -424,16 +424,26 @@
                     <hint>Enter the email of the person</hint>
                 </field>
             </row>
-            <!--     <row>-->
-            <!--     <field>-->
-            <!--       <dc-schema>person</dc-schema>-->
-            <!--       <dc-element>identifier</dc-element>-->
-            <!--       <dc-qualifier>orcid</dc-qualifier>-->
-            <!--       <label>Orcid</label>-->
-            <!--       <input-type>onebox</input-type>-->
-            <!--       <hint>Enter the orcid of the person</hint>-->
-            <!--     </field>-->
-            <!--     </row>-->
+            <row>
+                <field>
+                  <dc-schema>person</dc-schema>
+                  <dc-element>identifier</dc-element>
+                  <dc-qualifier>lattes</dc-qualifier>
+                  <label>Lattes</label>
+                  <input-type>onebox</input-type>
+                  <hint>Enter the lattes of the person</hint>
+                </field>
+            </row>
+            <row>
+                <field>
+                  <dc-schema>person</dc-schema>
+                  <dc-element>identifier</dc-element>
+                  <dc-qualifier>orcid</dc-qualifier>
+                  <label>Orcid</label>
+                  <input-type>onebox</input-type>
+                  <hint>Enter the orcid of the person</hint>
+                </field>
+            </row>
             <row>
                 <field>
                     <dc-schema>person</dc-schema>
