@@ -415,7 +415,7 @@
                     <hint>Enter the first name of the person</hint>
                 </field>
             </row>
-            <row>
+            <!-- <row>
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>email</dc-element>
@@ -423,7 +423,7 @@
                     <input-type>onebox</input-type>
                     <hint>Enter the email of the person</hint>
                 </field>
-            </row>
+            </row> -->
             <row>
                 <field>
                   <dc-schema>person</dc-schema>
@@ -431,7 +431,7 @@
                   <dc-qualifier>lattes</dc-qualifier>
                   <label>Lattes</label>
                   <input-type>onebox</input-type>
-                  <hint>Enter the lattes of the person</hint>
+                  <hint>Entre com identificador do Lattes</hint>
                 </field>
             </row>
             <row>
