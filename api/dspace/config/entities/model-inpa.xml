@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE relationships SYSTEM "relationship-types.dtd">
+
+<relationships>
+    <type>
+        <leftType>Publication</leftType>
+        <rightType>Person</rightType>
+        <!-- Publicação → Pessoa -->
+        <leftwardType>isAuthorOfPublication</leftwardType>
+        <!-- Pessoa → Publicação -->
+        <rightwardType>isPublicationOfAuthor</rightwardType>
+        <leftCardinality>
+            <min>0</min>
+        </leftCardinality>
+        <rightCardinality>
+            <min>0</min>
+        </rightCardinality>
+        <copyToLeft>true</copyToLeft>
+    </type>
+    <type>
+        <leftType>Publication</leftType>
+        <rightType>Person</rightType>
+        <leftwardType>isEditorOfPublication</leftwardType>
+        <rightwardType>isPublicationOfEditor</rightwardType>
+        <leftCardinality>
+            <min>0</min>
+        </leftCardinality>
+        <rightCardinality>
+            <min>0</min>
+        </rightCardinality>
+        <copyToLeft>true</copyToLeft>
+    </type>
+</relationships>
