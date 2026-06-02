@@ -549,6 +549,16 @@
                     <hint>Enter the job title of the person</hint>
                 </field>
             </row>
+            <row>
+                <field>
+                    <dc-schema>person</dc-schema>
+                    <dc-element>alumniOf</dc-element>
+                    <label>Programa de Pós-Graduação</label>
+                    <input-type value-pairs-name="ppg_types">dropdown</input-type>
+                    <!-- <input-type>onebox</input-type> -->
+                    <hint>Entre com programa de pós-graduação</hint>
+                </field>
+            </row>
         </form>
 
         <!-- Form which defines the metadata page/section for depositing Project Entities -->
@@ -1760,6 +1770,17 @@
             </pair>
 
         </value-pairs>
+
+        <value-pairs value-pairs-name="ppg_types" dc-term="type">
+            <pair>
+                <displayed-value>Agricultura no Trópico Úmido</displayed-value>
+                <stored-value>atu</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Interactive Resource</displayed-value>
+                <stored-value>interactive resource</stored-value>
+            </pair>
+            </value-pairs>
 
         <!-- OpenAIRE document types
         https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/4.0.1/field_publicationtype.html

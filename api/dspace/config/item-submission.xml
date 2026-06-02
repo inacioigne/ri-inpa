@@ -400,7 +400,7 @@
                  customized during submission.-->
             <!-- <step id="custom-url"/> -->
             <step id="upload"/>
-            <step id="license"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!-- Submission form used during Person editing (post-publication via EditItem system).
