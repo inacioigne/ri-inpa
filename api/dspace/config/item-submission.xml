@@ -376,7 +376,8 @@
             <step id="publicationStep"/>
             <step id="traditionalpagetwo"/>
             <step id="upload"/>
-            <step id="license"/>
+            <!-- <step id="license"/> -->
+             <step id="cclicense"/>
         </submission-process>
 
         <!-- Submission form used during Publication editing (post-publication via EditItem system).
