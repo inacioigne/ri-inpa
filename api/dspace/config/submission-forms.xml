@@ -309,7 +309,7 @@
                 Uncomment the following definition to enable entry of
                 editors on the publication submission form
             -->
-            <!--
+
             <row>
                 <relation-field>
                     <relationship-type>isEditorOfPublication</relationship-type>
@@ -326,8 +326,8 @@
                     <externalsources>orcid</externalsources>
                     <required></required>
                 </relation-field>
-              </row>
-              -->
+            </row>
+
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>

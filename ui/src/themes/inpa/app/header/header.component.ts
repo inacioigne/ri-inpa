@@ -1,5 +1,6 @@
 import { AsyncPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { RouterLink } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
@@ -14,8 +15,8 @@ import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.comp
 
 @Component({
   selector: 'ds-themed-header',
-  // styleUrls: ['header.component.scss'],
-  styleUrls: ['../../../../app/header/header.component.scss'],
+  styleUrls: ['header.component.scss'],
+  // styleUrls: ['../../../../app/header/header.component.scss'],
   templateUrl: 'header.component.html',
   // templateUrl: '../../../../app/header/header.component.html',
   imports: [
@@ -31,5 +32,11 @@ import { ThemedNavbarComponent } from '../../../../app/navbar/themed-navbar.comp
     TranslateModule,
   ],
 })
-export class HeaderComponent extends BaseComponent {
+export class HeaderComponent extends BaseComponent implements OnInit {
+  public isNavBarCollapsed$: Observable<boolean>;
+
+  ngOnInit() {
+    super.ngOnInit();
+    this.isNavBarCollapsed$ = this.menuService.isMenuCollapsed(this.menuID);
+  }
 }
