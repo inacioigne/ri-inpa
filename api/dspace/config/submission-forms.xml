@@ -1846,7 +1846,7 @@
                 <displayed-value>Mestrado</displayed-value>
                 <stored-value>master thesis</stored-value>
             </pair>
-            <!-- <pair>
+            <pair>
                 <displayed-value>Interactive Resource</displayed-value>
                 <stored-value>interactive resource</stored-value>
             </pair>
@@ -2086,13 +2086,13 @@
             <pair>
                 <displayed-value>- Working Paper</displayed-value>
                 <stored-value>working paper</stored-value>
-            </pair> -->
-            <!-- <pair>
+            </pair> 
+            <pair>
                 <displayed-value>- Thesis</displayed-value>
                 <stored-value>thesis</stored-value>
-            </pair> -->
+            </pair> 
             
-            <!-- <pair>
+            <pair>
                 <displayed-value>- Musical Notation</displayed-value>
                 <stored-value>musical notation</stored-value>
             </pair>
@@ -2115,7 +2115,7 @@
             <pair>
                 <displayed-value>Clinical Study</displayed-value>
                 <stored-value>clinical study</stored-value>
-            </pair> -->
+            </pair> 
         </value-pairs>
 
         <value-pairs value-pairs-name="openaire_version_types" dc-term="version">
