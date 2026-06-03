@@ -468,8 +468,21 @@
                         <dc-qualifier>program</dc-qualifier>
                         <repeatable>false</repeatable>
                         <label>Nome do programa de pós-graduação:</label>
-                        <!-- <type-bind>Tese, Dissertação</type-bind> -->
+                        <style>col-md-8</style>
+                        <type-bind>doctoral thesis, master thesis</type-bind>
                         <input-type value-pairs-name="ppg_types">dropdown</input-type>
+                        <hint>CAMPO OBRIGATÓRIO</hint>
+                        <required>CAMPO OBRIGATÓRIO</required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>identifier</dc-element>
+                        <dc-qualifier>ppgcode</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Código do PPG:</label>
+                        <style>col-md-4</style>
+                        <!-- <type-bind>Tese, Dissertação</type-bind> -->
+                        <input-type value-pairs-name="ppgcode">dropdown</input-type>
                         <hint>CAMPO OBRIGATÓRIO</hint>
                         <required>CAMPO OBRIGATÓRIO</required>
                     </field>
@@ -1582,10 +1595,10 @@
                 <displayed-value>DOI</displayed-value>
                 <stored-value>doi</stored-value>
             </pair>
-            <pair>
+            <!-- <pair>
                 <displayed-value>Códdigo do PPG</displayed-value>
                 <stored-value>ppgcode</stored-value>
-            </pair>
+            </pair> -->
             <pair>
                 <displayed-value>Gov't Doc #</displayed-value>
                 <stored-value>govdoc</stored-value>
@@ -1800,6 +1813,17 @@
             </pair>
         </value-pairs>
 
+        <value-pairs value-pairs-name="ppgcode" dc-term="identifier">
+            <pair>
+                <displayed-value>ATU - 12002011010P6</displayed-value>
+                <stored-value>12002011010P6</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Interactive Resource</displayed-value>
+                <stored-value>interactive resource</stored-value>
+            </pair>
+        </value-pairs>
+
         <!-- OpenAIRE document types
         https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/4.0.1/field_publicationtype.html
              Based on COAR Vocabularies -> Controlled Vocabulary for Resource Type Genres (Version 2.0):
@@ -1811,6 +1835,18 @@
                 <stored-value>book</stored-value>
             </pair>
             <pair>
+                <displayed-value>-- Bachelor Thesis</displayed-value>
+                <stored-value>bachelor thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Tese</displayed-value>
+                <stored-value>doctoral thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Mestrado</displayed-value>
+                <stored-value>master thesis</stored-value>
+            </pair>
+            <!-- <pair>
                 <displayed-value>Interactive Resource</displayed-value>
                 <stored-value>interactive resource</stored-value>
             </pair>
@@ -2050,24 +2086,13 @@
             <pair>
                 <displayed-value>- Working Paper</displayed-value>
                 <stored-value>working paper</stored-value>
-            </pair>
+            </pair> -->
             <!-- <pair>
                 <displayed-value>- Thesis</displayed-value>
                 <stored-value>thesis</stored-value>
             </pair> -->
-            <pair>
-                <displayed-value>-- Bachelor Thesis</displayed-value>
-                <stored-value>bachelor thesis</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Tese</displayed-value>
-                <stored-value>doctoral thesis</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Mestrado</displayed-value>
-                <stored-value>master thesis</stored-value>
-            </pair>
-            <pair>
+            
+            <!-- <pair>
                 <displayed-value>- Musical Notation</displayed-value>
                 <stored-value>musical notation</stored-value>
             </pair>
@@ -2090,7 +2115,7 @@
             <pair>
                 <displayed-value>Clinical Study</displayed-value>
                 <stored-value>clinical study</stored-value>
-            </pair>
+            </pair> -->
         </value-pairs>
 
         <value-pairs value-pairs-name="openaire_version_types" dc-term="version">
