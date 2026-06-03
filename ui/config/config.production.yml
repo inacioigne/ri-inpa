@@ -4,6 +4,8 @@ rest:
   port: 443
   nameSpace: /server
 
+defaultLanguage: pt-BR
+
 # Theme Config
 themes:
   - name: inpa
