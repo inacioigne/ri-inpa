@@ -439,8 +439,8 @@
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Type</label>
-                    <input-type value-pairs-name="common_types">dropdown</input-type>
+                    <label>Tipo</label>
+                    <input-type value-pairs-name="openaire_types">dropdown</input-type>
                     <hint>Select the type(s) of content of the item. To select more than one value
                         in the list, you may have to hold down the "CTRL" or "Shift" key. </hint>
                     <required>You must choose at least one type.</required>
@@ -460,6 +460,19 @@
                         select 'N/A'. </hint>
                     <required></required>
                 </field>
+            </row>
+            <row>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>publisher</dc-element>
+                        <dc-qualifier>program</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Nome do programa de pós-graduação:</label>
+                        <!-- <type-bind>Tese, Dissertação</type-bind> -->
+                        <input-type value-pairs-name="ppg_types">dropdown</input-type>
+                        <hint>CAMPO OBRIGATÓRIO</hint>
+                        <required>CAMPO OBRIGATÓRIO</required>
+                    </field>
             </row>
         </form>
 
@@ -1559,6 +1572,7 @@
     <!-- stores the associated stored-values in the database.                  -->
 
     <form-value-pairs>
+
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
                 <displayed-value>ISSN</displayed-value>
@@ -1569,8 +1583,8 @@
                 <stored-value>doi</stored-value>
             </pair>
             <pair>
-                <displayed-value>ISMN</displayed-value>
-                <stored-value>ismn</stored-value>
+                <displayed-value>Códdigo do PPG</displayed-value>
+                <stored-value>ppgcode</stored-value>
             </pair>
             <pair>
                 <displayed-value>Gov't Doc #</displayed-value>
@@ -1596,8 +1610,8 @@
                 <stored-value>Article</stored-value>
             </pair>
             <pair>
-                <displayed-value>Book</displayed-value>
-                <stored-value>Book</stored-value>
+                <displayed-value>Livro</displayed-value>
+                <stored-value>book</stored-value>
             </pair>
             <pair>
                 <displayed-value>Book chapter</displayed-value>
@@ -1660,8 +1674,12 @@
                 <stored-value>Technical Report</stored-value>
             </pair>
             <pair>
-                <displayed-value>Thesis</displayed-value>
-                <stored-value>Thesis</stored-value>
+                <displayed-value>Tese</displayed-value>
+                <stored-value>doctoral thesis</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Dissertação</displayed-value>
+                <stored-value>master thesis</stored-value>
             </pair>
             <pair>
                 <displayed-value>Video</displayed-value>
@@ -1717,7 +1735,7 @@
                 <displayed-value>Chinese</displayed-value>
                 <stored-value>zh</stored-value>
             </pair>
-            
+
             <pair>
                 <displayed-value>Turkish</displayed-value>
                 <stored-value>tr</stored-value>
@@ -1780,7 +1798,7 @@
                 <displayed-value>Interactive Resource</displayed-value>
                 <stored-value>interactive resource</stored-value>
             </pair>
-            </value-pairs>
+        </value-pairs>
 
         <!-- OpenAIRE document types
         https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/4.0.1/field_publicationtype.html
@@ -1868,7 +1886,7 @@
                 <displayed-value>- Bibliography</displayed-value>
                 <stored-value>bibliography</stored-value>
             </pair>
-            
+
             <pair>
                 <displayed-value>-- Book Part</displayed-value>
                 <stored-value>book part</stored-value>
@@ -2033,20 +2051,20 @@
                 <displayed-value>- Working Paper</displayed-value>
                 <stored-value>working paper</stored-value>
             </pair>
-            <pair>
+            <!-- <pair>
                 <displayed-value>- Thesis</displayed-value>
                 <stored-value>thesis</stored-value>
-            </pair>
+            </pair> -->
             <pair>
                 <displayed-value>-- Bachelor Thesis</displayed-value>
                 <stored-value>bachelor thesis</stored-value>
             </pair>
             <pair>
-                <displayed-value>-- Doctoral Thesis</displayed-value>
+                <displayed-value>Tese</displayed-value>
                 <stored-value>doctoral thesis</stored-value>
             </pair>
             <pair>
-                <displayed-value>-- Master Thesis</displayed-value>
+                <displayed-value>Mestrado</displayed-value>
                 <stored-value>master thesis</stored-value>
             </pair>
             <pair>
