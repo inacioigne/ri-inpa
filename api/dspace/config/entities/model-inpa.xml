@@ -17,7 +17,22 @@
         </rightCardinality>
         <copyToLeft>true</copyToLeft>
     </type>
+    <!-- isEditorOfPublication -->
     <type>
+        <leftType>Publication</leftType>
+        <rightType>Person</rightType>
+        <leftwardType>isAdvisorOfPublication</leftwardType>
+        <rightwardType>isPublicationOfAdvisor</rightwardType>
+        <leftCardinality>
+            <min>0</min>
+        </leftCardinality>
+        <rightCardinality>
+            <min>0</min>
+        </rightCardinality>
+        <copyToLeft>true</copyToLeft>
+    </type>
+
+     <type>
         <leftType>Publication</leftType>
         <rightType>Person</rightType>
         <leftwardType>isEditorOfPublication</leftwardType>

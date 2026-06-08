@@ -220,16 +220,12 @@
             </row>
         </form>
 
-        <!-- Form which defines the second page/section of the "traditional" DSpace submission
-        process,
-             often used when depositing normal Items. -->
         <form name="traditionalpagetwo">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
-                    <!-- An input-type of tag MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
                     <label>Subject Keywords</label>
                     <input-type>tag</input-type>
@@ -242,11 +238,23 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
+                    <dc-qualifier>resumo</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Resumo</label>
+                    <input-type>textarea</input-type>
+                    <hint>Resumo</hint>
+                    <required></required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
                     <dc-qualifier>abstract</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Abstract</label>
                     <input-type>textarea</input-type>
-                    <hint>Enter the abstract of the item.</hint>
+                    <hint>Resumo em inglês</hint>
                     <required></required>
                 </field>
             </row>
@@ -283,13 +291,27 @@
              'traditionalpageone' form. The only difference is the Author field can be used to link the
              Publication Entity to a Person Entity. -->
         <form name="publicationStep">
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Tipo</label>
+                    <input-type value-pairs-name="openaire_types">dropdown</input-type>
+                    <hint>Coloque o tipo do item</hint>
+                    <required>Obrigatório</required>
+                </field>
+            </row>
+
             <row>
                 <relation-field>
                     <relationship-type>isAuthorOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>Author</label>
-                    <hint>Enter the author's name (Family name, Given names).</hint>
+                    <label>Autor</label>
+                    <hint>Coloque o nome do autor</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -298,25 +320,36 @@
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
-                    <!-- You may choose to validate author names via a Regular Expression if it's
-                    appropriate for
-                         your institution. The below regex requires a comma to be present in the author field.
-                         However, this is disabled by default to support organizations as authors, etc. -->
-                    <!--<regex>\w+(,)+\w+</regex>-->
                 </relation-field>
             </row>
-            <!--
-                Uncomment the following definition to enable entry of
-                editors on the publication submission form
-            -->
+
+            <!-- advisor -->
+            <row>
+                <relation-field>
+                    <relationship-type>isAdvisorOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable></repeatable>
+                    <label>Orientador</label>
+                    <hint>Entre com o nome do orientador</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>advisor</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                </relation-field>
+            </row>
 
             <row>
                 <relation-field>
                     <relationship-type>isEditorOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>Editor</label>
+                    <label>Organizador</label>
                     <hint>Enter the editor's name (Family name, Given names).</hint>
+                    <type-bind>book</type-bind>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -353,31 +386,42 @@
                 </field>
             </row>
             <row>
+                 <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Editora</label>
+                    <style>col-md-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>Editora</hint>
+                    <required></required>
+                </field>
+
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>date</dc-element>
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Date of Issue</label>
-                    <style>col-md-4</style>
+                    <label>Data</label>
+                    <style>col-md-3</style>
                     <input-type>date</input-type>
-                    <hint>Please give the date of previous publication or public distribution. You
-                        can leave out the day and/or month if they aren't applicable. </hint>
-                    <required>You must enter at least the year.</required>
+                    <hint>Data de publicação</hint>
+                    <required>Obrigatório</required>
                 </field>
 
-                <field>
+                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>pages</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Publisher</label>
-                    <style>col-md-8</style>
+                    <label>Número de Páginas</label>
+                    <style>col-md-3</style>
                     <input-type>onebox</input-type>
-                    <hint>Enter the name of the publisher of the previously issued instance of this
-                        item.</hint>
+                    <hint>Número de Páginas</hint>
                     <required></required>
                 </field>
+
             </row>
             <row>
                 <field>
@@ -433,19 +477,7 @@
                     <required></required>
                 </field>
             </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Tipo</label>
-                    <input-type value-pairs-name="openaire_types">dropdown</input-type>
-                    <hint>Select the type(s) of content of the item. To select more than one value
-                        in the list, you may have to hold down the "CTRL" or "Shift" key. </hint>
-                    <required>You must choose at least one type.</required>
-                </field>
-            </row>
+
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -454,38 +486,35 @@
                     <repeatable>false</repeatable>
                     <label>Language</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the item. If the language does
-                        not appear in the list, please select 'Other'. If the content does not
-                        really have a language (for example, if it is a dataset or an image) please
-                        select 'N/A'. </hint>
+                    <hint>Selecione o idioma principal do item</hint>
                     <required></required>
                 </field>
             </row>
             <row>
-                    <field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>publisher</dc-element>
-                        <dc-qualifier>program</dc-qualifier>
-                        <repeatable>false</repeatable>
-                        <label>Nome do programa de pós-graduação:</label>
-                        <style>col-md-8</style>
-                        <type-bind>doctoral thesis, master thesis</type-bind>
-                        <input-type value-pairs-name="ppg_types">dropdown</input-type>
-                        <hint>CAMPO OBRIGATÓRIO</hint>
-                        <required>CAMPO OBRIGATÓRIO</required>
-                    </field>
-                    <field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>identifier</dc-element>
-                        <dc-qualifier>ppgcode</dc-qualifier>
-                        <repeatable>false</repeatable>
-                        <label>Código do PPG:</label>
-                        <style>col-md-4</style>
-                        <!-- <type-bind>Tese, Dissertação</type-bind> -->
-                        <input-type value-pairs-name="ppgcode">dropdown</input-type>
-                        <hint>CAMPO OBRIGATÓRIO</hint>
-                        <required>CAMPO OBRIGATÓRIO</required>
-                    </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>program</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Nome do programa de pós-graduação:</label>
+                    <style>col-md-8</style>
+                    <type-bind>doctoral thesis, master thesis</type-bind>
+                    <input-type value-pairs-name="ppg_types">dropdown</input-type>
+                    <hint>CAMPO OBRIGATÓRIO</hint>
+                    <required>CAMPO OBRIGATÓRIO</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>ppgcode</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Código do PPG:</label>
+                    <style>col-md-4</style>
+                    <!-- <type-bind>Tese, Dissertação</type-bind> -->
+                    <input-type value-pairs-name="ppgcode">dropdown</input-type>
+                    <hint>CAMPO OBRIGATÓRIO</hint>
+                    <required>CAMPO OBRIGATÓRIO</required>
+                </field>
             </row>
         </form>
 
@@ -518,15 +547,6 @@
                     <hint>Enter the first name of the person</hint>
                 </field>
             </row>
-            <!-- <row>
-                <field>
-                    <dc-schema>person</dc-schema>
-                    <dc-element>email</dc-element>
-                    <label>Email</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the email of the person</hint>
-                </field>
-            </row> -->
             <row>
                 <field>
                     <dc-schema>person</dc-schema>
@@ -556,16 +576,6 @@
                     <hint>Enter the birth date of the person</hint>
                 </field>
             </row>
-            <!--            <row>-->
-            <!--                <field>-->
-            <!--                    <dc-schema>person</dc-schema>-->
-            <!--                    <dc-element>identifier</dc-element>-->
-            <!--                    <dc-qualifier>staffid</dc-qualifier>-->
-            <!--                    <label>Staff ID</label>-->
-            <!--                    <input-type>onebox</input-type>-->
-            <!--                    <hint>Enter the staff id of the person</hint>-->
-            <!--                </field>-->
-            <!--            </row>-->
             <row>
                 <field>
                     <dc-schema>person</dc-schema>
@@ -581,7 +591,6 @@
                     <dc-element>alumniOf</dc-element>
                     <label>Programa de Pós-Graduação</label>
                     <input-type value-pairs-name="ppg_types">dropdown</input-type>
-                    <!-- <input-type>onebox</input-type> -->
                     <hint>Entre com programa de pós-graduação</hint>
                 </field>
             </row>
@@ -1831,7 +1840,7 @@
         -->
         <value-pairs value-pairs-name="openaire_types" dc-term="type">
             <pair>
-                <displayed-value>- Livro</displayed-value>
+                <displayed-value>Livro</displayed-value>
                 <stored-value>book</stored-value>
             </pair>
             <pair>
@@ -1843,7 +1852,7 @@
                 <stored-value>doctoral thesis</stored-value>
             </pair>
             <pair>
-                <displayed-value>Mestrado</displayed-value>
+                <displayed-value>Dissertação</displayed-value>
                 <stored-value>master thesis</stored-value>
             </pair>
             <pair>
@@ -2086,12 +2095,12 @@
             <pair>
                 <displayed-value>- Working Paper</displayed-value>
                 <stored-value>working paper</stored-value>
-            </pair> 
+            </pair>
             <pair>
                 <displayed-value>- Thesis</displayed-value>
                 <stored-value>thesis</stored-value>
-            </pair> 
-            
+            </pair>
+
             <pair>
                 <displayed-value>- Musical Notation</displayed-value>
                 <stored-value>musical notation</stored-value>
@@ -2115,7 +2124,7 @@
             <pair>
                 <displayed-value>Clinical Study</displayed-value>
                 <stored-value>clinical study</stored-value>
-            </pair> 
+            </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="openaire_version_types" dc-term="version">
