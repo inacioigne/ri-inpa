@@ -104,10 +104,11 @@
         <entry key="organization.identifier.ror" value-ref="publicationEditor_identifierRor"/>
     </util:map>
 
+    <!-- AdvisorOfPublication -->
     <util:map id="isAdvisorOfPublicationMap">
         <entry key="dc.contributor.advisor" value-ref="publicationAdvisor_author"/>
-        <entry key="person.identifier.orcid" value-ref="publicationAdvisor_identifierLattes"/>
-        <!-- <entry key="organization.identifier.ror" value-ref="publicationEditor_identifierRor"/> -->
+        <entry key="dc.identifier.advisor-lattes" value-ref="publicationAdvisor_identifierLattes"/>
+        <entry key="dc.identifier.advisor-orcid" value-ref="publicationAdvisor_identifierOrcid"/>
     </util:map>
 
     <bean class="org.dspace.content.virtual.Concatenate" id="publicationAdvisor_author">
@@ -129,6 +130,14 @@
         <property name="fields">
             <util:list>
                 <value>person.identifier.lattes</value>
+            </util:list>
+        </property>
+    </bean>
+
+    <bean class="org.dspace.content.virtual.Collected" id="publicationAdvisor_identifierOrcid">
+        <property name="fields">
+            <util:list>
+                <value>person.identifier.orcid</value>
             </util:list>
         </property>
     </bean>
