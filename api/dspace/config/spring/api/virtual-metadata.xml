@@ -13,6 +13,8 @@
             <map>
                 <entry key="isAuthorOfPublication" value-ref="isAuthorOfPublicationMap"/>
                 <entry key="isEditorOfPublication" value-ref="isEditorOfPublicationMap"/>
+                <!-- isAdvisorOfPublication -->
+                <entry key="isAdvisorOfPublication" value-ref="isAdvisorOfPublicationMap"/>
                 <entry key="isOrgUnitOfPublication" value-ref="isOrgUnitOfPublicationMap"/>
                 <entry key="isPersonOfProject" value-ref="isPersonOfProjectMap"/>
                 <entry key="isOrgUnitOfProject" value-ref="isOrgUnitOfProjectMap"/>
@@ -101,6 +103,35 @@
         <entry key="person.identifier.orcid" value-ref="publicationEditor_identifierOrcid"/>
         <entry key="organization.identifier.ror" value-ref="publicationEditor_identifierRor"/>
     </util:map>
+
+    <util:map id="isAdvisorOfPublicationMap">
+        <entry key="dc.contributor.advisor" value-ref="publicationAdvisor_author"/>
+        <entry key="person.identifier.orcid" value-ref="publicationAdvisor_identifierLattes"/>
+        <!-- <entry key="organization.identifier.ror" value-ref="publicationEditor_identifierRor"/> -->
+    </util:map>
+
+    <bean class="org.dspace.content.virtual.Concatenate" id="publicationAdvisor_author">
+        <property name="fields">
+            <util:list>
+                <value>person.familyName</value>
+                <value>person.givenName</value>
+                <value>organization.legalName</value>
+            </util:list>
+        </property>
+        <property name="separator">
+            <value>, </value>
+        </property>
+        <property name="useForPlace" value="true"/>
+        <property name="populateWithNameVariant" value="true"/>
+    </bean>
+
+     <bean class="org.dspace.content.virtual.Collected" id="publicationAdvisor_identifierLattes">
+        <property name="fields">
+            <util:list>
+                <value>person.identifier.lattes</value>
+            </util:list>
+        </property>
+    </bean>
     <!--
          If the related item has:
             person.familyName = Smith
