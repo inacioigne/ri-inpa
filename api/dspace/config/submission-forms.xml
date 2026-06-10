@@ -551,21 +551,37 @@
                 </relation-field>
             </row>
             <row>
+                <relation-field>
+                    <relationship-type>isOrgUnitOfPerson</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>false</repeatable>
+                    <label>Instituição</label>
+                    <hint>Busque o nome da instituição</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>other</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <!-- <externalsources>ror</externalsources> -->
+                </relation-field>
+            </row>
+            <row>
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>familyName</dc-element>
-                    <label>Last name</label>
+                    <label>Sobrenome</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the last name of the person</hint>
+                    <hint>Entre com o sobrenome</hint>
                 </field>
             </row>
             <row>
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>givenName</dc-element>
-                    <label>First name</label>
+                    <label>Nome</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the first name of the person</hint>
+                    <hint>Entre com o nome</hint>
                 </field>
             </row>
             <row>
