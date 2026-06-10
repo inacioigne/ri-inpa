@@ -331,10 +331,31 @@
                     <repeatable></repeatable>
                     <label>Orientador</label>
                     <hint>Entre com o nome do orientador</hint>
+                    <type-bind>doctoral thesis, master thesis</type-bind>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>advisor</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                </relation-field>
+            </row>
+
+             <!-- co-advisor -->
+            <row>
+                <relation-field>
+                    <relationship-type>isCoAdvisorOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable></repeatable>
+                    <label>Coorientador</label>
+                    <hint>Entre com o nome do coorientador</hint>
+                    <type-bind>doctoral thesis, master thesis</type-bind>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>co-advisor</dc-qualifier>
                         <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>

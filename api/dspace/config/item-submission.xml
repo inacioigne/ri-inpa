@@ -452,7 +452,7 @@
             <step id="collection"/>
             <step id="orgUnitStep"/>
             <step id="upload"/>
-            <step id="license"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!-- Submission form used during OrgUnit editing (post-publication via EditItem system).
