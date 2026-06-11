@@ -531,7 +531,7 @@
                     <repeatable>false</repeatable>
                     <label>Código do PPG:</label>
                     <style>col-md-4</style>
-                    <!-- <type-bind>Tese, Dissertação</type-bind> -->
+                    <type-bind>doctoral thesis, master thesis</type-bind>
                     <input-type value-pairs-name="ppgcode">dropdown</input-type>
                     <hint>CAMPO OBRIGATÓRIO</hint>
                     <required>CAMPO OBRIGATÓRIO</required>
