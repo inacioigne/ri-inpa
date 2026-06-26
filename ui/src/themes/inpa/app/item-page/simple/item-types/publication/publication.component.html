@@ -66,6 +66,11 @@
       [label]="'publication.page.doi'"
       urlRegex="^https?://">
     </ds-generic-item-page-field>
+    <!-- ISBN -->
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.identifier.isbn']"
+      label="ISBN">
+    </ds-generic-item-page-field>
   </div>
   <div class="col-12 col-md-7">
     @if (showDownloadLinkAsAttachment) {
