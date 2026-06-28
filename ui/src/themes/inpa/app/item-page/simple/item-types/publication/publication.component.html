@@ -33,6 +33,7 @@
       <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
     }
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+    <!-- Organizadores -->
     <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
       [parentItem]="object"
       [itemType]="'Person'"
@@ -45,6 +46,23 @@
       [metadataFields]="['dc.contributor.author', 'dc.creator']"
       [label]="'item.page.authors' | translate">
     </ds-metadata-representation-list>
+
+    <!-- Advisors -->
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
+      [parentItem]="object"
+      [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.advisor']"
+      [label]="'item.page.advisor' | translate">
+    </ds-metadata-representation-list>
+
+    <!-- co-advisor -->
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
+      [parentItem]="object"
+      [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.co-advisor']"
+      [label]="'item.page.co-advisor' | translate">
+    </ds-metadata-representation-list>
+
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.title']"
       [label]="'publication.page.journal-title'">
@@ -70,6 +88,12 @@
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.identifier.isbn']"
       label="ISBN">
+    </ds-generic-item-page-field>
+
+    <!-- pages -->
+    <ds-generic-item-page-field [item]="object"
+      [fields]="['dc.description.pages']"
+      [label]="'publication.page.pages'">
     </ds-generic-item-page-field>
   </div>
   <div class="col-12 col-md-7">

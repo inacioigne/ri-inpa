@@ -227,9 +227,9 @@
                     <dc-element>subject</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Subject Keywords</label>
+                    <label>Assunto</label>
                     <input-type>tag</input-type>
-                    <hint>Enter appropriate subject keywords or phrases.</hint>
+                    <hint>Entre com o assunto do item.</hint>
                     <required></required>
                     <vocabulary>srsc</vocabulary>
                 </field>
