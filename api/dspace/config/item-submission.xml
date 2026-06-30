@@ -375,9 +375,9 @@
             <!-- Publications use a custom first step, but share page 2 with "traditional" Item form -->
             <step id="publicationStep"/>
             <step id="traditionalpagetwo"/>
+            <step id="teseStep"/>
             <step id="upload"/>
-            <!-- <step id="license"/> -->
-             <step id="cclicense"/>
+            <step id="cclicense"/>
         </submission-process>
 
         <!-- Submission form used during Publication editing (post-publication via EditItem system).
