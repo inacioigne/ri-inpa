@@ -57,6 +57,20 @@
         </rightCardinality>
     </type>
 
+     <type>
+        <leftType>Publication</leftType>
+        <rightType>Person</rightType>
+        <leftwardType>isCoAdvisorOfPublication</leftwardType>
+        <rightwardType>isPublicationOfCoAdvisor</rightwardType>
+        <leftCardinality>
+            <min>0</min>
+        </leftCardinality>
+        <rightCardinality>
+            <min>0</min>
+        </rightCardinality>
+        <copyToLeft>true</copyToLeft>
+    </type>
+
      -->
 
     <!-- Novos -->
@@ -64,8 +78,8 @@
      <type>
         <leftType>Publication</leftType>
         <rightType>Person</rightType>
-        <leftwardType>isCoAdvisorOfPublication</leftwardType>
-        <rightwardType>isPublicationOfCoAdvisor</rightwardType>
+        <leftwardType>isRefereeOfPublication</leftwardType>
+        <rightwardType>isPublicationOfReferee</rightwardType>
         <leftCardinality>
             <min>0</min>
         </leftCardinality>

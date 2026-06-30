@@ -17,6 +17,8 @@
                 <entry key="isAdvisorOfPublication" value-ref="isAdvisorOfPublicationMap"/>
                 <!-- isCoAdvisorOfPublication -->
                 <entry key="isCoAdvisorOfPublication" value-ref="isCoAdvisorOfPublicationMap"/>
+                <!-- isRefereeOfPublication -->
+                <entry key="isRefereeOfPublication" value-ref="isRefereeOfPublicationMap"/>
                 <entry key="isOrgUnitOfPublication" value-ref="isOrgUnitOfPublicationMap"/>
                 <entry key="isPersonOfProject" value-ref="isPersonOfProjectMap"/>
                 <entry key="isOrgUnitOfProject" value-ref="isOrgUnitOfProjectMap"/>
@@ -175,6 +177,44 @@
     </bean>
 
     <bean class="org.dspace.content.virtual.Collected" id="publicationCoAdvisor_identifierOrcid">
+        <property name="fields">
+            <util:list>
+                <value>person.identifier.orcid</value>
+            </util:list>
+        </property>
+    </bean>
+
+    <!-- isRefereeOfPublication -->
+    <util:map id="isRefereeOfPublicationMap">
+        <entry key="dc.contributor.referee" value-ref="publicationReferee_author"/>
+        <entry key="dc.identifier.referee-lattes" value-ref="publicationReferee_identifierLattes"/>
+        <entry key="dc.identifier.referee-orcid" value-ref="publicationReferee_identifierOrcid"/>
+    </util:map>
+
+    <bean class="org.dspace.content.virtual.Concatenate" id="publicationReferee_author">
+        <property name="fields">
+            <util:list>
+                <value>person.familyName</value>
+                <value>person.givenName</value>
+                <value>organization.legalName</value>
+            </util:list>
+        </property>
+        <property name="separator">
+            <value>, </value>
+        </property>
+        <property name="useForPlace" value="true"/>
+        <property name="populateWithNameVariant" value="true"/>
+    </bean>
+
+     <bean class="org.dspace.content.virtual.Collected" id="publicationReferee_identifierLattes">
+        <property name="fields">
+            <util:list>
+                <value>person.identifier.lattes</value>
+            </util:list>
+        </property>
+    </bean>
+
+    <bean class="org.dspace.content.virtual.Collected" id="publicationReferee_identifierOrcid">
         <property name="fields">
             <util:list>
                 <value>person.identifier.orcid</value>
