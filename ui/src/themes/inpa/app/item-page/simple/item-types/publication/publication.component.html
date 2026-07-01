@@ -63,6 +63,14 @@
       [label]="'item.page.co-advisor' | translate">
     </ds-metadata-representation-list>
 
+    <!-- Membros de banca -->
+    <ds-metadata-representation-list class="ds-item-page-mixed-author-field"
+      [parentItem]="object"
+      [itemType]="'Person'"
+      [metadataFields]="['dc.contributor.referee']"
+      [label]="'item.page.referee' | translate">
+    </ds-metadata-representation-list>
+
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.title']"
       [label]="'publication.page.journal-title'">

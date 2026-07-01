@@ -1,7 +1,9 @@
 {
   "type.doctoral-thesis": "Tese",
+  "type.master-thesis": "Dissertação",
   "item.page.advisor": "Orientador",
   "item.page.co-advisor": "Coorientadores",
   "item.page.abstract": "Abstract",
-  "publication.page.pages": "Número de páginas"
+  "publication.page.pages": "Número de páginas",
+  "item.page.referee": "Membros de banca"
 }

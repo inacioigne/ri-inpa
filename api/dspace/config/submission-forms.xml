@@ -299,7 +299,7 @@
                 <relation-field>
                     <relationship-type>isCoAdvisorOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
-                    <repeatable></repeatable>
+                    <repeatable>true</repeatable>
                     <label>Coorientador</label>
                     <hint>Entre com o nome do coorientador</hint>
                     <type-bind>doctoral thesis, master thesis</type-bind>
@@ -319,7 +319,7 @@
                 <relation-field>
                     <relationship-type>isRefereeOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
-                    <repeatable></repeatable>
+                    <repeatable>true</repeatable>
                     <label>Membro de banca</label>
                     <hint>Entre com o nome do membro de banca</hint>
                     <type-bind>doctoral thesis, master thesis</type-bind>
@@ -366,7 +366,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Agência de fomento</label>
                     <input-type value-pairs-name="sponsorship_types">dropdown</input-type> 
                     <hint>Escolha a agência de fomento</hint>
@@ -1864,6 +1864,10 @@
                 <displayed-value>Entomologia - ENT</displayed-value>
                 <stored-value>ent</stored-value>
             </pair>
+            <pair>
+                <displayed-value>Ecologia - ECO</displayed-value>
+                <stored-value>eco</stored-value>
+            </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="ppgcode" dc-term="identifier">
@@ -1878,6 +1882,10 @@
             <pair>
                 <displayed-value>ENT - 12002011004P6</displayed-value>
                 <stored-value>12002011004P6</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>ECO - 12002011003P0</displayed-value>
+                <stored-value>12002011003P0</stored-value>
             </pair>
         </value-pairs>
 
