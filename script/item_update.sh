@@ -17,7 +17,7 @@ fi
 echo "Exportando item $HANDLE..."
 if docker exec "api" bash -c "/dspace/bin/dspace export -t ITEM -d /dspace/item -n 1 -i $HANDLE"; then
     echo "OK: Item exportado com sucesso."
-    docker cp ${PDF} api:/dspace/item/1/
+    docker cp /home/${PDF} api:/dspace/item/1/
     echo "OK: PDF: ${PDF} copiado com sucesso."
     
 else
