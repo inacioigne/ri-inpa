@@ -19,7 +19,15 @@ if docker exec "api" bash -c "/dspace/bin/dspace export -t ITEM -d /dspace/item 
     echo "OK: Item exportado com sucesso."
     docker cp /home/${PDF} api:/dspace/item/1/
     sed -i "s|^[^[:space:]]*|$PDF|" /home/contents
-    echo "OK: PDF: ${PDF} copiado com sucesso."
+    docker cp /home/contents api:/dspace/item/1/
+    echo "Arquivos copiados com sucesso."
+    echo "Atualizando item $HANDLE..."
+    if docker exec "api" bash -c "./bin/dspace itemupdate -e ri@inpa.gov.br -s /dspace/item -A"; then
+        echo "OK: Item atualizado com sucesso."
+    else
+        echo "ERRO: Não foi possível atualizar o item."
+        exit 1
+    fi
     
 else
     echo "ERRO: Não foi possível exportar o item."
