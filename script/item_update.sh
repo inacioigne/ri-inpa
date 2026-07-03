@@ -18,6 +18,7 @@ echo "Exportando item $HANDLE..."
 if docker exec "api" bash -c "/dspace/bin/dspace export -t ITEM -d /dspace/item -n 1 -i $HANDLE"; then
     echo "OK: Item exportado com sucesso."
     docker cp /home/${PDF} api:/dspace/item/1/
+    sed -i "s|^[^[:space:]]*|$PDF|" /home/contents
     echo "OK: PDF: ${PDF} copiado com sucesso."
     
 else
