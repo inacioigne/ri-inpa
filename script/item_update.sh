@@ -18,7 +18,7 @@ echo "Exportando item $HANDLE..."
 if docker exec "api" bash -c "/dspace/bin/dspace export -t ITEM -d /dspace/item -n 1 -i $HANDLE"; then
     echo "OK: Item exportado com sucesso."
     echo "Removendo bitstream ORIGINAL..."
-    docker exec "api" bash -c "dspace/bin/dspace ItemUpdate -e ri@inpa.gov.br -s ./item -D ORIGINAL"
+    docker exec "api" bash -c "./bin/dspace itemupdate -e ri@inpa.gov.br -s ./item -D ORIGINAL"
     docker cp /home/${PDF} api:/dspace/item/1/
     sed -i "s|^[^[:space:]]*|$PDF|" /home/contents
     docker cp /home/contents api:/dspace/item/1/
