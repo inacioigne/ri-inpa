@@ -28,3 +28,9 @@ themes:
       attributes:
         rel: manifest
         href: assets/inpa/images/favicons/manifest.webmanifest
+
+info:
+  enableEndUserAgreement: true
+  enablePrivacyStatement: true
+  enableCOARNotifySupport: false
+  enableCookieConsentPopup: true

@@ -10,5 +10,7 @@
   "relationships.Publication.isEditorOfPublication.Person": "Organizador",
   "relationships.Publication.isAdvisorOfPublication.Person": "Orientador",
   "relationships.Publication.isCoAdvisorOfPublication.Person": "Coorientador",
-  "relationships.Publication.isRefereeOfPublication.Person": "Membros"
+  "relationships.Publication.isRefereeOfPublication.Person": "Membros",
+  "repository.title": "RI INPA ::",
+  "repository.title.prefix": "RI INPA :: ",
 }
