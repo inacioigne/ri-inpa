@@ -1,6 +1,6 @@
 import {
   AsyncPipe,
-  NgClass,
+  // NgClass,
 } from '@angular/common';
 import {
   Component,
@@ -28,7 +28,7 @@ import { getFirstSucceededRemoteDataPayload } from '../../core/shared/operators'
   imports: [
     AsyncPipe,
     NgbTooltip,
-    NgClass,
+    // NgClass,
   ],
   templateUrl: './orcid-badge-and-tooltip.component.html',
   styleUrl: './orcid-badge-and-tooltip.component.scss',

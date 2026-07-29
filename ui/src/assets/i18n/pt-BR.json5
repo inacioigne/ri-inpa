@@ -7901,4 +7901,12 @@
   "item.page.referee": "Membros de banca",
 
   "type.book": "Livro",
+
+  "relationships.Publication.isEditorOfPublication.Person": "Organizador",
+
+  "relationships.Publication.isAdvisorOfPublication.Person": "Orientador",
+
+  "relationships.Publication.isCoAdvisorOfPublication.Person": "Coorientador",
+
+  "relationships.Publication.isRefereeOfPublication.Person": "Membros",
 }

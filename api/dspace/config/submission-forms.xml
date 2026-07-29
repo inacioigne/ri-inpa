@@ -4,22 +4,6 @@
 
 <input-forms>
 
-    <!-- The form-definitions map lays out the detailed definition of all the -->
-    <!-- submission forms. Each separate form set has a unique name as an     -->
-    <!-- attribute. This name matches one of the names in the form-map. One   -->
-    <!-- named form set has the name "traditional"; as this name suggests,    -->
-    <!-- it is the old style and is also the default, which gets used when    -->
-    <!-- the specified collection has no correspondingly-named form set.      -->
-    <!--                                                                      -->
-    <!-- Each form set contains an ordered set of pages; each page defines    -->
-    <!-- one submission metadata entry screen. Each page has an ordered list  -->
-    <!-- of field definitions, Each field definition corresponds to one       -->
-    <!-- metadata entry (a so-called row), which has a DC element name, a     -->
-    <!-- displayed label, a text string prompt which is called a hint, and    -->
-    <!-- an input-type. Each field also may hold optional elements: DC        -->
-    <!-- qualifier name, a repeatable flag, and a text string whose presence  -->
-    <!-- serves as a 'this field is required' flag.                           -->
-
     <form-definitions>
         <!-- Form used for entering in Bitstream/File metadata after uploading a file -->
         <form name="bitstream-metadata">
@@ -85,9 +69,6 @@
             </row>
         </form>
 
-        <!-- Form which defines the first page/section of the "traditional" DSpace submission
-        process,
-             often used when depositing normal Items (i.e. Items which are not Entities). -->
         <form name="traditionalpageone">
             <row>
                 <field>
@@ -258,8 +239,7 @@
                     <required></required>
                 </field>
             </row>
-           
-            <row>
+            <!-- <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
@@ -270,7 +250,7 @@
                     <hint>Enter any other description or comments in this box.</hint>
                     <required></required>
                 </field>
-            </row>
+            </row> -->
         </form>
 
         <form name="teseStep">
@@ -361,14 +341,14 @@
                 </field>
             </row>
 
-             <row>
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <dc-qualifier>sponsorship</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Agência de fomento</label>
-                    <input-type value-pairs-name="sponsorship_types">dropdown</input-type> 
+                    <input-type value-pairs-name="sponsorship_types">dropdown</input-type>
                     <hint>Escolha a agência de fomento</hint>
                     <required></required>
                 </field>
@@ -433,10 +413,10 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Title</label>
+                    <label>Título</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the main title of the item.</hint>
-                    <required>You must enter a main title for this item.</required>
+                    <hint>Entre com o título principal.</hint>
+                    <required>O título é obrigatório.</required>
                 </field>
             </row>
             <row>
@@ -445,9 +425,9 @@
                     <dc-element>title</dc-element>
                     <dc-qualifier>alternative</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Other Titles</label>
+                    <label>Título alternativo</label>
                     <input-type>onebox</input-type>
-                    <hint>If the item has any alternative titles, please enter them here.</hint>
+                    <hint>Coloque o título em outros idiomas, se houver</hint>
                     <required></required>
                 </field>
             </row>
@@ -489,7 +469,7 @@
                 </field>
 
             </row>
-            <row>
+            <!-- <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>identifier</dc-element>
@@ -501,20 +481,20 @@
                         item.</hint>
                     <required></required>
                 </field>
-            </row>
+            </row> -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>relation</dc-element>
                     <dc-qualifier>ispartofseries</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Series/Report No.</label>
+                    <label>Série</label>
                     <input-type>series</input-type>
-                    <hint>Enter the series and number assigned to this item by your community.</hint>
+                    <hint>Entre com o nome e volume da série ou coleção</hint>
                     <required></required>
                 </field>
             </row>
-            <row>
+            <!-- <row>
                 <relation-field>
                     <relationship-type>isDatasetOfPublication</relationship-type>
                     <search-configuration>dataset</search-configuration>
@@ -528,9 +508,48 @@
                         <input-type>onebox</input-type>
                     </linked-metadata-field>
                 </relation-field>
-            </row>
+            </row> -->
             <row>
                 <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>doi</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>DOI</label>
+                    <style>col-md-4</style>
+                    <input-type>onebox</input-type>
+                    <hint>Entre com o link DOI do item</hint>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>isbn</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>DOI</label>
+                    <style>col-md-4</style>
+                    <input-type>onebox</input-type>
+                    <hint>Entre com ISBN do item</hint>
+                    <type-bind>book</type-bind>
+                    <required></required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>issn</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>DOI</label>
+                    <style>col-md-4</style>
+                    <input-type>onebox</input-type>
+                    <hint>Entre com ISBN do item</hint>
+                    <type-bind>article</type-bind>
+                    <required></required>
+                </field>
+
+
+            </row>
+            <row>
+                <!-- <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>identifier</dc-element>
                     <dc-qualifier></dc-qualifier>
@@ -541,8 +560,7 @@
                     <hint>If the item has any identification numbers or codes associated with it,
                         please enter the types and the actual numbers or codes. </hint>
                     <required></required>
-
-                </field>
+                </field> -->
 
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1856,9 +1874,17 @@
                 <displayed-value>Agricultura no Trópico Úmido - ATU</displayed-value>
                 <stored-value>atu</stored-value>
             </pair>
+             <pair>
+                <displayed-value>Botânica - BOT</displayed-value>
+                <stored-value>bot</stored-value>
+            </pair>
             <pair>
                 <displayed-value>Ciências de Florestas Tropicais - CFT</displayed-value>
                 <stored-value>cft</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Clima e Ambiente - CLIAMB</displayed-value>
+                <stored-value>cliamb</stored-value>
             </pair>
             <pair>
                 <displayed-value>Entomologia - ENT</displayed-value>
@@ -1868,6 +1894,14 @@
                 <displayed-value>Ecologia - ECO</displayed-value>
                 <stored-value>eco</stored-value>
             </pair>
+            <pair>
+                <displayed-value>Biologia de Água Doce e Pesca Interior - BADPI</displayed-value>
+                <stored-value>badpi</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Genética, Conservação e Biologia Evolutiva - GCBEv</displayed-value>
+                <stored-value>GCBEv</stored-value>
+            </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="ppgcode" dc-term="identifier">
@@ -1876,17 +1910,36 @@
                 <stored-value>12002011010P6</stored-value>
             </pair>
             <pair>
+                <displayed-value>BADPI - 12002011001P7</displayed-value>
+                <stored-value>12002011001P7</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>BOT - 12002011002P3</displayed-value>
+                <stored-value>12002011002P3</stored-value>
+            </pair>
+            <pair>
                 <displayed-value>CFT - 12002011006P9</displayed-value>
                 <stored-value>12002011006P9</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>CLIAMB - 12002011011P2</displayed-value>
+                <stored-value>12002011011P2</stored-value>
+            </pair>
+             <pair>
+                <displayed-value>ECO - 12002011003P0</displayed-value>
+                <stored-value>12002011003P0</stored-value>
             </pair>
             <pair>
                 <displayed-value>ENT - 12002011004P6</displayed-value>
                 <stored-value>12002011004P6</stored-value>
             </pair>
-            <pair>
-                <displayed-value>ECO - 12002011003P0</displayed-value>
-                <stored-value>12002011003P0</stored-value>
+             <pair>
+                <displayed-value>GCBEv - 12002011009P8</displayed-value>
+                <stored-value>12002011009P8</stored-value>
             </pair>
+           
+
+
         </value-pairs>
 
         <value-pairs value-pairs-name="sponsorship_types" dc-term="sponsorship">
@@ -1899,7 +1952,8 @@
                 <stored-value>fapeam</stored-value>
             </pair>
             <pair>
-                <displayed-value>Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq</displayed-value>
+                <displayed-value>Conselho Nacional de Desenvolvimento Científico e Tecnológico -
+                    CNPq</displayed-value>
                 <stored-value>cnpq</stored-value>
             </pair>
         </value-pairs>

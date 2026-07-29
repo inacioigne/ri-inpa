@@ -6,5 +6,9 @@
   "item.page.co-advisor": "Coorientadores",
   "item.page.abstract": "Abstract",
   "publication.page.pages": "Número de páginas",
-  "item.page.referee": "Membros de banca"
+  "item.page.referee": "Membros de banca",
+  "relationships.Publication.isEditorOfPublication.Person": "Organizador",
+  "relationships.Publication.isAdvisorOfPublication.Person": "Orientador",
+  "relationships.Publication.isCoAdvisorOfPublication.Person": "Coorientador",
+  "relationships.Publication.isRefereeOfPublication.Person": "Membros"
 }

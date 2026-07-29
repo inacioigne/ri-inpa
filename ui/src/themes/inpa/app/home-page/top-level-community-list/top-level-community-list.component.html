@@ -1,0 +1,26 @@
+<ng-container *ngVar="(communitiesRD$ | async) as communitiesRD">
+    @if (communitiesRD?.hasSucceeded ) {
+    <h2>Coleções</h2>
+    <div class="row">
+    @for (item of collections; track item.title) {
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2 mb-4">
+        <div class="card h-100">
+          <a [routerLink]="item.link" class="text-decoration-none text-dark">
+            <div class="card-body text-center">
+              <img [src]="item.image" class="img-fluid mb-3" alt="{{item.title}}">
+              <p class="card-subtitle fs-6 mb-0 text-primary">{{item.title}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    }
+  </div>
+
+    }
+    @if (communitiesRD?.hasFailed ) {
+    <ds-error message="{{'error.top-level-communities' | translate}}"></ds-error>
+    }
+    @if (communitiesRD?.isLoading ) {
+    <ds-loading message="{{'loading.top-level-communities' | translate}}"></ds-loading>
+    }
+</ng-container>
