@@ -1874,7 +1874,11 @@
                 <displayed-value>Agricultura no Trópico Úmido - ATU</displayed-value>
                 <stored-value>atu</stored-value>
             </pair>
-             <pair>
+            <pair>
+                <displayed-value>Bionorte</displayed-value>
+                <stored-value>bionorte</stored-value>
+            </pair>
+            <pair>
                 <displayed-value>Botânica - BOT</displayed-value>
                 <stored-value>bot</stored-value>
             </pair>
@@ -1902,6 +1906,10 @@
                 <displayed-value>Genética, Conservação e Biologia Evolutiva - GCBEv</displayed-value>
                 <stored-value>GCBEv</stored-value>
             </pair>
+            <pair>
+                <displayed-value>Gestão de Áreas Protegidas na Amazônia - GAP</displayed-value>
+                <stored-value>gap</stored-value>
+            </pair>
         </value-pairs>
 
         <value-pairs value-pairs-name="ppgcode" dc-term="identifier">
@@ -1912,6 +1920,10 @@
             <pair>
                 <displayed-value>BADPI - 12002011001P7</displayed-value>
                 <stored-value>12002011001P7</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Bionorte - 12001015038P1</displayed-value>
+                <stored-value>12001015038P1</stored-value>
             </pair>
             <pair>
                 <displayed-value>BOT - 12002011002P3</displayed-value>
@@ -1925,7 +1937,7 @@
                 <displayed-value>CLIAMB - 12002011011P2</displayed-value>
                 <stored-value>12002011011P2</stored-value>
             </pair>
-             <pair>
+            <pair>
                 <displayed-value>ECO - 12002011003P0</displayed-value>
                 <stored-value>12002011003P0</stored-value>
             </pair>
@@ -1933,11 +1945,14 @@
                 <displayed-value>ENT - 12002011004P6</displayed-value>
                 <stored-value>12002011004P6</stored-value>
             </pair>
-             <pair>
+            <pair>
                 <displayed-value>GCBEv - 12002011009P8</displayed-value>
                 <stored-value>12002011009P8</stored-value>
             </pair>
-           
+            <pair>
+                <displayed-value>GAP - 12002011012P9</displayed-value>
+                <stored-value>12002011012P9</stored-value>
+            </pair>
 
 
         </value-pairs>
