@@ -71,9 +71,9 @@
         <copyToLeft>true</copyToLeft>
     </type>
 
-     -->
+     
 
-    <!-- Novos -->
+    
 
      <type>
         <leftType>Publication</leftType>
@@ -87,6 +87,34 @@
             <min>0</min>
         </rightCardinality>
         <copyToLeft>true</copyToLeft>
+    </type>
+    -->
+
+    <!-- Novos -->
+      <type>
+        <leftType>Journal</leftType>
+        <rightType>JournalVolume</rightType>
+        <leftwardType>isVolumeOfJournal</leftwardType>
+        <rightwardType>isJournalOfVolume</rightwardType>
+        <leftCardinality>
+            <min>0</min>
+        </leftCardinality>
+        <rightCardinality>
+            <min>0</min>
+        </rightCardinality>
+    </type>
+
+    <type>
+        <leftType>JournalVolume</leftType>
+        <rightType>JournalIssue</rightType>
+        <leftwardType>isIssueOfJournalVolume</leftwardType>
+        <rightwardType>isJournalVolumeOfIssue</rightwardType>
+        <leftCardinality>
+            <min>0</min>
+        </leftCardinality>
+        <rightCardinality>
+            <min>0</min>
+        </rightCardinality>
     </type>
     
 </relationships>
