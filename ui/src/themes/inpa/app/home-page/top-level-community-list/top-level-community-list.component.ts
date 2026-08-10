@@ -21,7 +21,7 @@ import { VarDirective } from '../../../../../app/shared/utils/var.directive';
     TranslateModule,
     VarDirective,
     RouterModule
-    
+
   ],
 })
 export class TopLevelCommunityListComponent extends BaseComponent {
@@ -31,7 +31,12 @@ export class TopLevelCommunityListComponent extends BaseComponent {
       image: 'assets/inpa/images/collections/books.png',
       title: 'Livros'
     },
-     {
+    {
+      link: '/entities/journal/39b2e288-30a8-4e84-b386-5c7bfdcbdcac',
+      image: 'assets/inpa/images/collections/amazonia.png',
+      title: 'Revista Amazoniana'
+    },
+    {
       link: '/communities/63d1e74d-163f-4741-a505-d20c4615b410',
       image: 'assets/inpa/images/collections/tede.png',
       title: 'Teses & Dissertações'

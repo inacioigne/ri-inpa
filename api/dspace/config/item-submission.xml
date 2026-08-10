@@ -475,7 +475,7 @@
             <step id="collection"/>
             <step id="journalStep"/>
             <step id="upload"/>
-            <step id="license"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!-- Submission form used during Journal editing (post-publication via EditItem system).
@@ -493,7 +493,7 @@
             <step id="collection"/>
             <step id="journalVolumeStep"/>
             <step id="upload"/>
-            <step id="license"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!-- Submission form used during JournalVolume editing (post-publication via EditItem system).
@@ -511,7 +511,8 @@
             <step id="collection"/>
             <step id="journalIssueStep"/>
             <step id="upload"/>
-            <step id="license"/>
+             <step id="cclicense"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!-- Submission form used during JournalIssue editing (post-publication via EditItem system).
