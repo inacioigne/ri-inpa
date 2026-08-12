@@ -32,6 +32,7 @@ services:
     volumes:
       - assetstore:/dspace/assetstore
       - ./api/dspace/config:/dspace/config
+      - /home/ri-fbn/local/GeoLite2-City.mmdb:/dspace/GeoLite2-City.mmdb
     entrypoint:
       - /bin/bash
       - '-c'
