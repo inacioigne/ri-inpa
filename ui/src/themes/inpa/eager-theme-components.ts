@@ -5,7 +5,6 @@ import { NavbarComponent } from './app/navbar/navbar.component';
 import { FooterComponent } from './app/footer/footer.component';
 
 
-
 export const COMPONENTS = [
   HomeNewsComponent,
   HeaderNavbarWrapperComponent,

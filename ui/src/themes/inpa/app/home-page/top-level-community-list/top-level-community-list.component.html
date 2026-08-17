@@ -1,5 +1,5 @@
-<ng-container *ngVar="(communitiesRD$ | async) as communitiesRD">
-    @if (communitiesRD?.hasSucceeded ) {
+<!-- <ng-container *ngVar="(communitiesRD$ | async) as communitiesRD"> -->
+    <!-- @if (communitiesRD?.hasSucceeded ) { -->
     <h2>Coleções</h2>
     <div class="row">
     @for (item of collections; track item.title) {
@@ -15,12 +15,11 @@
       </div>
     }
   </div>
-
-    }
-    @if (communitiesRD?.hasFailed ) {
+    <!-- } -->
+    <!-- @if (communitiesRD?.hasFailed ) {
     <ds-error message="{{'error.top-level-communities' | translate}}"></ds-error>
     }
     @if (communitiesRD?.isLoading ) {
     <ds-loading message="{{'loading.top-level-communities' | translate}}"></ds-loading>
-    }
-</ng-container>
+    } -->
+<!-- </ng-container> -->
