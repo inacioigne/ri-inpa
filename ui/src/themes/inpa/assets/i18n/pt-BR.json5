@@ -2,6 +2,8 @@
   "type.doctoral-thesis": "Tese",
   "type.master-thesis": "Dissertação",
   "type.book": "Livro",
+  "type.journal-article": "Artigo",
+  "type.letter-to-the-editor": "Carta ao editor",
   "item.page.advisor": "Orientador",
   "item.page.co-advisor": "Coorientadores",
   "item.page.abstract": "Abstract",

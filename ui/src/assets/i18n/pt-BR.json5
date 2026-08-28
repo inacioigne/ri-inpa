@@ -7909,4 +7909,8 @@
   "relationships.Publication.isCoAdvisorOfPublication.Person": "Coorientador",
 
   "relationships.Publication.isRefereeOfPublication.Person": "Membros",
+
+  "type.journal-article": "Artigo",
+
+  "type.letter-to-the-editor": "Carta ao editor",
 }
