@@ -12,9 +12,9 @@
       <ds-thumbnail [thumbnail]="object?.thumbnail | async"></ds-thumbnail>
     </ds-metadata-field-wrapper>
 
-    <!-- @if (showDownloadLinkAsAttachment !== true) {
+    @if (showDownloadLinkAsAttachment !== true) {
       <ds-item-page-file-section [item]="object"></ds-item-page-file-section>
-    } -->
+    } 
 
     <ds-generic-item-page-field [item]="object"
       [fields]="['publicationvolume.volumeNumber']"
