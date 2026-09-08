@@ -24,6 +24,17 @@ ui:
   useProxies: true
 
 defaultLanguage: pt-BR
+fallbackLanguage: pt-BR
+languages:
+  - code: en
+    label: English
+    active: true
+  - code: es
+    label: Español
+    active: true
+  - code: pt-BR
+    label: Português
+    active: true
 
 # Theme Config
 themes:
