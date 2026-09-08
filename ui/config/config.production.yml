@@ -23,7 +23,7 @@ ui:
   # Trust X-FORWARDED-* headers from proxies (default = true)
   useProxies: true
 
-defaultLanguage: pt-BR
+# defaultLanguage: pt-BR
 fallbackLanguage: pt-BR
 languages:
   - code: en
