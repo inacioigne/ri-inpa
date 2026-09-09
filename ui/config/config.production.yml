@@ -3,6 +3,7 @@ rest:
   host: ri.inpa.gov.br
   port: 443
   nameSpace: /server
+  ssrBaseUrl: http://api:8080/server
 
 ui:
   ssl: true
