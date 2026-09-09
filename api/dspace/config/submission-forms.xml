@@ -1860,44 +1860,44 @@
 
         <value-pairs value-pairs-name="ppg_types" dc-term="type">
             <pair>
-                <displayed-value>Agricultura no Trópico Úmido - ATU</displayed-value>
-                <stored-value>atu</stored-value>
+                <displayed-value>Agricultura no Trópico Úmido</displayed-value>
+                <stored-value>Agricultura no Trópico Úmido</stored-value>
             </pair>
             <pair>
                 <displayed-value>Bionorte</displayed-value>
-                <stored-value>bionorte</stored-value>
+                <stored-value>Bionorte</stored-value>
             </pair>
             <pair>
-                <displayed-value>Botânica - BOT</displayed-value>
-                <stored-value>bot</stored-value>
+                <displayed-value>Botânica</displayed-value>
+                <stored-value>Botânica</stored-value>
             </pair>
             <pair>
-                <displayed-value>Ciências de Florestas Tropicais - CFT</displayed-value>
-                <stored-value>cft</stored-value>
+                <displayed-value>Ciências de Florestas Tropicais</displayed-value>
+                <stored-value>Ciências de Florestas Tropicais</stored-value>
             </pair>
             <pair>
-                <displayed-value>Clima e Ambiente - CLIAMB</displayed-value>
-                <stored-value>cliamb</stored-value>
+                <displayed-value>Clima e Ambiente</displayed-value>
+                <stored-value>Clima e Ambiente</stored-value>
             </pair>
             <pair>
-                <displayed-value>Entomologia - ENT</displayed-value>
-                <stored-value>ent</stored-value>
+                <displayed-value>Entomologia</displayed-value>
+                <stored-value>Entomologia</stored-value>
             </pair>
             <pair>
-                <displayed-value>Ecologia - ECO</displayed-value>
-                <stored-value>eco</stored-value>
+                <displayed-value>Ecologia</displayed-value>
+                <stored-value>Ecologia</stored-value>
             </pair>
             <pair>
-                <displayed-value>Biologia de Água Doce e Pesca Interior - BADPI</displayed-value>
-                <stored-value>badpi</stored-value>
+                <displayed-value>Biologia de Água Doce e Pesca Interior</displayed-value>
+                <stored-value>Biologia de Água Doce e Pesca Interior</stored-value>
             </pair>
             <pair>
-                <displayed-value>Genética, Conservação e Biologia Evolutiva - GCBEv</displayed-value>
-                <stored-value>GCBEv</stored-value>
+                <displayed-value>Genética, Conservação e Biologia Evolutiva</displayed-value>
+                <stored-value>Genética, Conservação e Biologia Evolutiva</stored-value>
             </pair>
             <pair>
-                <displayed-value>Gestão de Áreas Protegidas na Amazônia - GAP</displayed-value>
-                <stored-value>gap</stored-value>
+                <displayed-value>Gestão de Áreas Protegidas na Amazônia</displayed-value>
+                <stored-value>Gestão de Áreas Protegidas na Amazônia</stored-value>
             </pair>
         </value-pairs>
 
