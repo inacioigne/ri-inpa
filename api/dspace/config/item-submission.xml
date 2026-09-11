@@ -474,7 +474,7 @@
         <submission-process name="Journal">
             <step id="collection"/>
             <step id="journalStep"/>
-            <step id="upload"/>
+            <!-- <step id="upload"/> -->
             <!-- <step id="license"/> -->
         </submission-process>
 
@@ -492,7 +492,7 @@
         <submission-process name="JournalVolume">
             <step id="collection"/>
             <step id="journalVolumeStep"/>
-            <step id="upload"/>
+            <!-- <step id="upload"/> -->
             <!-- <step id="license"/> -->
         </submission-process>
 
@@ -510,8 +510,8 @@
         <submission-process name="JournalIssue">
             <step id="collection"/>
             <step id="journalIssueStep"/>
-            <step id="upload"/>
-             <step id="cclicense"/>
+            <!-- <step id="upload"/> -->
+             <!-- <step id="cclicense"/> -->
             <!-- <step id="license"/> -->
         </submission-process>
 
