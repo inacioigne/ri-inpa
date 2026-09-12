@@ -1,0 +1,11 @@
+<a [routerLink]="[itemPageRoute]">
+   <div class="d-flex align-items-center gap-2 w-100">
+      <div class="flex-shrink-0">
+         <ds-thumbnail [thumbnail]="thumbnail$ | async" class="d-block"></ds-thumbnail>
+      </div>
+
+      <div class="flex-grow-1 d-flex align-items-center">
+         <span class="text-primary fw-semibold mb-0">{{ mdRepresentation.getValue() }}</span>
+      </div>
+   </div>
+</a>

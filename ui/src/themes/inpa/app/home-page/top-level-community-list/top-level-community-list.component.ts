@@ -1,13 +1,9 @@
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
-// import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 
 import { TopLevelCommunityListComponent as BaseComponent } from '../../../../../app/home-page/top-level-community-list/top-level-community-list.component';
-// import { ErrorComponent } from '../../../../../app/shared/error/error.component';
 import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed-loading.component';
-// import { ObjectCollectionComponent } from '../../../../../app/shared/object-collection/object-collection.component';
-// import { VarDirective } from '../../../../../app/shared/utils/var.directive';
 
 @Component({
   selector: 'ds-themed-top-level-community-list',
@@ -15,17 +11,18 @@ import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed
   templateUrl: './top-level-community-list.component.html',
   imports: [
     AsyncPipe,
-    // ErrorComponent,
-    // ObjectCollectionComponent,
     ThemedLoadingComponent,
-    // TranslateModule,
-    // VarDirective,
     RouterModule
 
   ],
 })
 export class TopLevelCommunityListComponent extends BaseComponent {
   public collections = [
+    {
+      link: '/entities/journal/27ea2d7b-8872-4425-a015-a01a15f2eec7',
+      image: 'assets/inpa/images/collections/boletim-rr.png',
+      title: 'Boletim Informativo: Núcleo de Roraima'
+    },
     {
       link: '/communities/26886ea1-e850-4399-974a-d128a4bc3406',
       image: 'assets/inpa/images/collections/books.png',

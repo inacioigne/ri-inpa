@@ -1,0 +1,147 @@
+{
+    "virtualMetadata": {
+        "uuid": "e816b179-1dfa-4179-8c46-0f13058c46e0",
+        "language": null,
+        "value": "Rocha, Suanny Lima da",
+        "place": 0,
+        "authority": "virtual::2169",
+        "confidence": -1
+    },
+    "handle": "inpa/1554",
+    "lastModified": "2026-09-09T17:50:02.736Z",
+    "isArchived": true,
+    "isDiscoverable": true,
+    "isWithdrawn": false,
+    "entityType": "Person",
+    "_links": {
+        "accessStatus": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/accessStatus"
+        },
+        "bundles": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/bundles"
+        },
+        "identifiers": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/identifiers"
+        },
+        "mappedCollections": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/mappedCollections"
+        },
+        "owningCollection": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/owningCollection"
+        },
+        "relationships": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/relationships"
+        },
+        "version": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/version"
+        },
+        "templateItemOf": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/templateItemOf"
+        },
+        "thumbnail": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/thumbnail"
+        },
+        "submitter": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af/submitter"
+        },
+        "self": {
+            "href": "https://ri.inpa.gov.br/server/api/core/items/9eb2ac7a-2a77-4810-a638-979b8e2bb8af"
+        }
+    },
+    "_name": null,
+    "id": "9eb2ac7a-2a77-4810-a638-979b8e2bb8af",
+    "uuid": "9eb2ac7a-2a77-4810-a638-979b8e2bb8af",
+    "type": "item",
+    "metadata": {
+        "dc.date.accessioned": [
+            {
+                "uuid": "7c6cfa88-a293-47f2-8b44-974de79e50b3",
+                "language": null,
+                "value": "2026-09-02T17:55:36Z",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+            }
+        ],
+        "dc.identifier.uri": [
+            {
+                "uuid": "7065f205-5b3f-4528-8b90-24146f726f09",
+                "language": null,
+                "value": "https://ri.inpa.gov.br/handle/inpa/1554",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+            }
+        ],
+        "dspace.entity.type": [
+            {
+                "uuid": "c02c971c-e049-4654-a9ea-d0f8102f432e",
+                "language": null,
+                "value": "Person",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+            }
+        ],
+        "person.alumniOf": [
+            {
+                "uuid": "bcaf7744-7563-4865-b0d4-d27467261aa9",
+                "language": null,
+                "value": "badpi",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+            }
+        ],
+        "person.familyName": [
+            {
+                "uuid": "ec27166a-6b35-4cff-9e61-9a7085e79873",
+                "language": null,
+                "value": "Rocha",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+            }
+        ],
+        "person.givenName": [
+            {
+                "uuid": "89e4f216-ffb8-47de-9c82-db676f774d76",
+                "language": null,
+                "value": "Suanny Lima da",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+            }
+        ],
+        "person.identifier.lattes": [
+            {
+                "uuid": "fb04abeb-5f38-44a6-b9f4-6a440141cce5",
+                "language": null,
+                "value": "http://lattes.cnpq.br/0451514469577091",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+            }
+        ],
+        "relation.isPublicationOfAuthor": [
+            {
+                "uuid": "b073c712-3cb2-4c74-93df-3930b685c9e0",
+                "language": null,
+                "value": "929fdb9b-eadb-4e34-8847-38dd4a289132",
+                "place": 0,
+                "authority": "virtual::2169",
+                "confidence": -1
+            }
+        ],
+        "relation.isPublicationOfAuthor.latestForDiscovery": [
+            {
+                "uuid": "23786fab-1ce5-4169-be86-604f5bb325e9",
+                "language": null,
+                "value": "929fdb9b-eadb-4e34-8847-38dd4a289132",
+                "place": -1,
+                "authority": "virtual::2169",
+                "confidence": -1
+            }
+        ]
+    }
+}
