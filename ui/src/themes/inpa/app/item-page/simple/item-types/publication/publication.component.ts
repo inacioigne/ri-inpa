@@ -1,4 +1,4 @@
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, JsonPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -28,17 +28,18 @@ import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/m
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
+import { AltmetricBadgeComponent } from 'src/themes/inpa/app/inpa-component/altmetric/altmetric-badge.component';
 
 @listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'inpa')
 @Component({
   selector: 'ds-publication',
-  // styleUrls: ['./publication.component.scss'],
-  styleUrls: ['../../../../../../../app/item-page/simple/item-types/publication/publication.component.scss'],
+  styleUrls: ['./publication.component.scss'],
+  // styleUrls: ['../../../../../../../app/item-page/simple/item-types/publication/publication.component.scss'],
   templateUrl: './publication.component.html',
-  // templateUrl: '../../../../../../../app/item-page/simple/item-types/publication/publication.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AsyncPipe,
+    JsonPipe,
     AttachmentSectionComponent,
     CollectionsComponent,
     DsoEditMenuComponent,
@@ -59,6 +60,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
     ThemedResultsBackButtonComponent,
     ThemedThumbnailComponent,
     TranslateModule,
+    AltmetricBadgeComponent,
   ],
 })
 export class PublicationComponent extends BaseComponent {

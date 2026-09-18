@@ -10,11 +10,6 @@ import { getFirstCompletedRemoteData } from '@dspace/core/shared/operators';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { RouterLink } from '@angular/router';
-// import { TruncatableComponent } from 'src/app/shared/truncatable/truncatable.component';
-// import { OrcidBadgeAndTooltipComponent } from 'src/app/shared/orcid-badge-and-tooltip/orcid-badge-and-tooltip.component';
-// import { MetadataDirective } from 'src/app/shared/metadata.directive';
-
-
 import { ItemMetadataRepresentationListElementComponent } from 'src/app/shared/object-list/metadata-representation-list-element/item/item-metadata-representation-list-element.component';
 import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.component';
 
@@ -25,10 +20,7 @@ import { ThemedThumbnailComponent } from 'src/app/thumbnail/themed-thumbnail.com
   imports: [
     AsyncPipe,
     ThemedThumbnailComponent,
-    RouterLink,
-    // TruncatableComponent,
-    // OrcidBadgeAndTooltipComponent,
-    // MetadataDirective
+    RouterLink
   ],
 })
 /**

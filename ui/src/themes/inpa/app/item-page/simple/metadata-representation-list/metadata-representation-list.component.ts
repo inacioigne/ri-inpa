@@ -1,4 +1,4 @@
-import { AsyncPipe, JsonPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -12,9 +12,7 @@ import { PersonListElementComponent } from '../../../inpa-component/person-list-
 @Component({
   selector: 'ds-themed-metadata-representation-list',
   templateUrl: './metadata-representation-list.component.html',
-  // templateUrl: '../../../../../../app/item-page/simple/metadata-representation-list/metadata-representation-list.component.html',
   imports: [
-    JsonPipe,
     AsyncPipe,
     MetadataFieldWrapperComponent,
     MetadataRepresentationLoaderComponent,

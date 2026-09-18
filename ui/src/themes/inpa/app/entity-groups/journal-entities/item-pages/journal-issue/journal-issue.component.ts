@@ -14,7 +14,7 @@ import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/m
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
-import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
+// import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
 
 
 @listableObjectComponent('JournalIssue', ViewMode.StandalonePage, Context.Any, 'inpa')
@@ -34,7 +34,7 @@ import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/s
     ThemedResultsBackButtonComponent,
     ThemedThumbnailComponent,
     TranslateModule,
-    ThemedFileSectionComponent,
+    // ThemedFileSectionComponent,
   ],
 })
 export class JournalIssueComponent extends BaseComponent {
