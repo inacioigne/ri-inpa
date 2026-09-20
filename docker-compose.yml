@@ -40,11 +40,11 @@ services:
         while (!</dev/tcp/dspacedb/5432) > /dev/null 2>&1; do sleep 1; done;
         /dspace/bin/dspace database migrate
         java -jar /dspace/webapps/server-boot.jar --dspace.dir=/dspace
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8080/server/api/system/status || exit 1"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
+    # healthcheck:
+    #   test: ["CMD-SHELL", "curl -f http://localhost:8080/server/api/system/status || exit 1"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 5
     # restart: unless-stopped
 
   dspacedb:
