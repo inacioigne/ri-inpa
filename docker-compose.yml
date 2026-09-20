@@ -5,6 +5,30 @@ networks:
         - subnet: 172.23.0.0/16
 
 services:
+  ui:
+    container_name: ui
+    environment:
+      DSPACE_UI_SSL: 'false'
+      DSPACE_UI_HOST: ui
+      DSPACE_UI_PORT: '4000'
+      DSPACE_UI_NAMESPACE: /
+      DSPACE_REST_SSL: 'true'
+      DSPACE_REST_HOST: ri.inpa.gov.br
+      DSPACE_REST_PORT: 443
+      DSPACE_REST_NAMESPACE: /server
+      TZ: America/Manaus
+    image: "inpa/angular:${DSPACE_VERSION}"
+    build:
+      context: ./ui
+      dockerfile: Dockerfile.dist
+    networks:
+      dspacenet:
+    ports:
+    - published: 4000
+      target: 4000
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
   api:
     container_name: api
     env_file:
@@ -13,13 +37,11 @@ services:
       LOGGING_CONFIG: /dspace/config/log4j2-container.xml
       TZ: America/Manaus
     image: "docker.io/inpa/api:${DSPACE_VERSION}"
-
     build:
       context: ./api
       dockerfile: Dockerfile
       args:
         DSPACE_VERSION: ${DSPACE_VERSION}
-    
     depends_on:
       dspacedb:
         condition: service_healthy
@@ -79,7 +101,6 @@ services:
       TZ: America/Manaus
     build:
       context: ./api/dspace/src/main/docker/dspace-solr/
-      # Provide path to Solr configs necessary to build Docker image
       additional_contexts:
         solrconfigs: ./api/dspace/solr/
       args:
