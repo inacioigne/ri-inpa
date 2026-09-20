@@ -5,7 +5,6 @@
 <input-forms>
 
     <form-definitions>
-        <!-- Form used for entering in Bitstream/File metadata after uploading a file -->
         <form name="bitstream-metadata">
             <row>
                 <field>
@@ -115,8 +114,9 @@
                     <label>Date of Issue</label>
                     <style>col-md-4</style>
                     <input-type>date</input-type>
-                    <hint>Please give the date of previous publication or public distribution. You
-                        can leave out the day and/or month if they aren't applicable. </hint>
+                    <hint>Please give the date of previous publication or public distribution.
+                        You can leave out the day and/or month if they aren't applicable.
+                    </hint>
                     <required>You must enter at least the year.</required>
                 </field>
 
@@ -128,8 +128,7 @@
                     <label>Publisher</label>
                     <style>col-md-8</style>
                     <input-type>onebox</input-type>
-                    <hint>Enter the name of the publisher of the previously issued instance of this
-                        item.</hint>
+                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
                     <required></required>
                 </field>
             </row>
@@ -141,8 +140,7 @@
                     <repeatable>false</repeatable>
                     <label>Citation</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the standard citation for the previously issued instance of this
-                        item.</hint>
+                    <hint>Enter the standard citation for the previously issued instance of this item.</hint>
                     <required></required>
                 </field>
             </row>
@@ -167,8 +165,9 @@
                     <repeatable>true</repeatable>
                     <label>Identifiers</label>
                     <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-                    <hint>If the item has any identification numbers or codes associated with it,
-                        please enter the types and the actual numbers or codes. </hint>
+                    <hint>If the item has any identification numbers or codes associated with
+                        it, please enter the types and the actual numbers or codes.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -180,7 +179,8 @@
                     <repeatable>true</repeatable>
                     <label>Type</label>
                     <input-type value-pairs-name="common_types">dropdown</input-type>
-                    <hint>Select the type of content of the item. </hint>
+                    <hint>Select the type of content of the item.
+                    </hint>
                     <required>You must choose at least one type.</required>
                 </field>
             </row>
@@ -192,10 +192,10 @@
                     <repeatable>false</repeatable>
                     <label>Language</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the item. If the language does
-                        not appear in the list, please select 'Other'. If the content does not
-                        really have a language (for example, if it is a dataset or an image) please
-                        select 'N/A'. </hint>
+                    <hint>Select the language of the main content of the item. If the language does not appear in the
+                        list, please select 'Other'. If the content does not really have a language (for example, if it
+                        is a dataset or an image) please select 'N/A'.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -239,18 +239,6 @@
                     <required></required>
                 </field>
             </row>
-            <!-- <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Description</label>
-                    <input-type>textarea</input-type>
-                    <hint>Enter any other description or comments in this box.</hint>
-                    <required></required>
-                </field>
-            </row> -->
         </form>
 
         <form name="teseStep">
@@ -355,7 +343,7 @@
             </row>
         </form>
 
-        <form name="publicationStep">
+         <form name="publicationStep">
 
             <row>
                 <field>
@@ -469,19 +457,7 @@
                 </field>
 
             </row>
-            <!-- <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>identifier</dc-element>
-                    <dc-qualifier>citation</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Citation</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the standard citation for the previously issued instance of this
-                        item.</hint>
-                    <required></required>
-                </field>
-            </row> -->
+       
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -494,21 +470,7 @@
                     <required></required>
                 </field>
             </row>
-            <!-- <row>
-                <relation-field>
-                    <relationship-type>isDatasetOfPublication</relationship-type>
-                    <search-configuration>dataset</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>Research Data</label>
-                    <hint>Enter the datasets this publication is based on.</hint>
-                    <linked-metadata-field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>relation</dc-element>
-                        <dc-qualifier>isBasedOn</dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                </relation-field>
-            </row> -->
+
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -568,7 +530,6 @@
 
         </form>
 
-        <!-- Form which defines the metadata page/section for depositing Person Entities -->
         <form name="personStep">
             <row>
                 <relation-field>
@@ -662,6 +623,7 @@
             </row>
         </form>
 
+
         <!-- Form which defines the metadata page/section for depositing Project Entities -->
         <form name="projectStep">
             <row>
@@ -682,36 +644,36 @@
                     <hint>Enter the id of the project</hint>
                 </field>
             </row>
-            <!--            <row>-->
-            <!--                <field>-->
-            <!--                    <dc-schema>project</dc-schema>-->
-            <!--                    <dc-element>identifier</dc-element>-->
-            <!--                    <dc-qualifier>status</dc-qualifier>-->
-            <!--                    <label>Status</label>-->
-            <!--                    <input-type value-pairs-name="project_status">dropdown</input-type>-->
-            <!--                    <hint>Enter the status of the project</hint>-->
-            <!--                </field>-->
-            <!--            </row>-->
-            <!--            <row>-->
-            <!--                <field>-->
-            <!--                    <dc-schema>project</dc-schema>-->
-            <!--                    <dc-element>identifier</dc-element>-->
-            <!--                    <dc-qualifier>startdate</dc-qualifier>-->
-            <!--                    <label>Start date</label>-->
-            <!--                    <input-type>date</input-type>-->
-            <!--                    <hint>Enter the start date of the project</hint>-->
-            <!--                </field>-->
-            <!--            </row>-->
-            <!--            <row>-->
-            <!--                <field>-->
-            <!--                    <dc-schema>project</dc-schema>-->
-            <!--                    <dc-element>identifier</dc-element>-->
-            <!--                    <dc-qualifier>expectedcompletion</dc-qualifier>-->
-            <!--                    <label>Expected Completion</label>-->
-            <!--                    <input-type>date</input-type>-->
-            <!--                    <hint>Enter the expected completion date of the project</hint>-->
-            <!--                </field>-->
-            <!--            </row>-->
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>project</dc-schema>-->
+<!--                    <dc-element>identifier</dc-element>-->
+<!--                    <dc-qualifier>status</dc-qualifier>-->
+<!--                    <label>Status</label>-->
+<!--                    <input-type value-pairs-name="project_status">dropdown</input-type>-->
+<!--                    <hint>Enter the status of the project</hint>-->
+<!--                </field>-->
+<!--            </row>-->
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>project</dc-schema>-->
+<!--                    <dc-element>identifier</dc-element>-->
+<!--                    <dc-qualifier>startdate</dc-qualifier>-->
+<!--                    <label>Start date</label>-->
+<!--                    <input-type>date</input-type>-->
+<!--                    <hint>Enter the start date of the project</hint>-->
+<!--                </field>-->
+<!--            </row>-->
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>project</dc-schema>-->
+<!--                    <dc-element>identifier</dc-element>-->
+<!--                    <dc-qualifier>expectedcompletion</dc-qualifier>-->
+<!--                    <label>Expected Completion</label>-->
+<!--                    <input-type>date</input-type>-->
+<!--                    <hint>Enter the expected completion date of the project</hint>-->
+<!--                </field>-->
+<!--            </row>-->
             <row>
                 <relation-field>
                     <relationship-type>isPersonOfProject</relationship-type>
@@ -1017,8 +979,7 @@
 
         </form>
 
-        <!-- Form which defines the *first* metadata page/section for depositing Dataset
-        Entities.-->
+        <!-- Form which defines the *first* metadata page/section for depositing Dataset Entities.-->
         <form name="datasetStep">
             <row>
                 <relation-field>
@@ -1068,8 +1029,9 @@
                     <label>Date of Issue</label>
                     <style>col-sm-4</style>
                     <input-type>date</input-type>
-                    <hint>Please give the date of previous publication or public distribution. You
-                        can leave out the day and/or month if they aren't applicable. </hint>
+                    <hint>Please give the date of previous publication or public distribution.
+                        You can leave out the day and/or month if they aren't applicable.
+                    </hint>
                     <required>You must enter at least the year.</required>
                 </field>
 
@@ -1080,8 +1042,7 @@
                     <label>Publisher</label>
                     <style>col-sm-8</style>
                     <input-type>onebox</input-type>
-                    <hint>Enter the name of the publisher of the previously issued instance of this
-                        item.</hint>
+                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
                 </field>
             </row>
             <row>
@@ -1107,8 +1068,9 @@
                     <repeatable>true</repeatable>
                     <label>Type</label>
                     <input-type value-pairs-name="common_types">dropdown</input-type>
-                    <hint>Select the type(s) of content of the item. To select more than one value
-                        in the list, you may have to hold down the "CTRL" or "Shift" key. </hint>
+                    <hint>Select the type(s) of content of the item. To select more than one value in the list, you may
+                        have to hold down the "CTRL" or "Shift" key.
+                    </hint>
                     <required>You must choose at least one type.</required>
                 </field>
             </row>
@@ -1120,10 +1082,10 @@
                     <repeatable>false</repeatable>
                     <label>Language</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the dataset. If the language
-                        does not appear in the list, please select 'Other'. If the content does not
-                        really have a language (for example, if it is a dataset or an image) please
-                        select 'N/A'. </hint>
+                    <hint>Select the language of the main content of the dataset. If the language does not appear in the
+                        list, please select 'Other'. If the content does not really have a language (for example, if it
+                        is a dataset or an image) please select 'N/A'.
+                    </hint>
                 </field>
             </row>
         </form>
@@ -1185,8 +1147,10 @@
                     <label>Date of Issue</label>
                     <style>col-md-4</style>
                     <input-type>date</input-type>
-                    <hint>Please give the date of previous publication or public distribution. You
-                        can leave out the day and/or month if they aren't applicable. </hint>
+                    <hint>Please give the date of previous publication or public distribution.
+                        You can leave out the day
+                        and/or month if they aren't applicable.
+                    </hint>
                     <required>You must enter at least the year.</required>
                 </field>
             </row>
@@ -1199,8 +1163,7 @@
                     <label>Publisher</label>
                     <style>col-md-8</style>
                     <input-type>onebox</input-type>
-                    <hint>Enter the name of the publisher of the previously issued instance of this
-                        item.</hint>
+                    <hint>Enter the name of the publisher of the previously issued instance of this item.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1237,8 +1200,10 @@
                     <repeatable>true</repeatable>
                     <label>Identifiers</label>
                     <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
-                    <hint>If the item has any identification numbers or codes associated with it,
-                        please enter the types and the actual numbers or codes. </hint>
+                    <hint>If the item has any identification numbers or codes associated with
+                        it, please enter the types
+                        and the actual numbers or codes.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1250,8 +1215,7 @@
                     <repeatable>false</repeatable>
                     <label>Title of Journal, Book or Event</label>
                     <input-type>onebox</input-type>
-                    <hint>Include the name of related item like the journal name, book title or
-                        event name.</hint>
+                    <hint>Include the name of related item like the journal name, book title or event name.</hint>
                     <required></required>
                 </field>
             </row>
@@ -1345,8 +1309,9 @@
                     <repeatable>true</repeatable>
                     <label>Type</label>
                     <input-type value-pairs-name="openaire_types">dropdown</input-type>
-                    <hint>Select the type(s) of content of the item. To select more than one value
-                        in the list, you may have to hold down the "CTRL" or "Shift" key. </hint>
+                    <hint>Select the type(s) of content of the item. To select more than one value in the list, you may
+                        have to hold down the "CTRL" or "Shift" key.
+                    </hint>
                     <required>You must choose at least one type.</required>
                 </field>
             </row>
@@ -1357,8 +1322,8 @@
                     <repeatable>false</repeatable>
                     <label>Resource Version</label>
                     <input-type value-pairs-name="openaire_version_types">dropdown</input-type>
-                    <hint>Select the version of the resource. If the resource does not have that
-                        information, please select "Not Applicable (or Unknown)".</hint>
+                    <hint>Select the version of the resource. If the resource does not have that information, please
+                        select "Not Applicable (or Unknown)".</hint>
                     <required></required>
                 </field>
                 <field>
@@ -1368,10 +1333,10 @@
                     <repeatable>false</repeatable>
                     <label>Language</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the item. If the language does
-                        not appear in the list, please select 'Other'. If the content does not
-                        really have a language (for example, if it is a dataset or an image) please
-                        select 'N/A'. </hint>
+                    <hint>Select the language of the main content of the item. If the language does not appear in the
+                        list, please select 'Other'. If the content does not really have a language (for example, if it
+                        is a dataset or an image) please select 'N/A'.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1521,8 +1486,9 @@
                     <repeatable>true</repeatable>
                     <label>Author identifier</label>
                     <input-type value-pairs-name="openaire_author_identifier_types">qualdrop_value</input-type>
-                    <hint>If the author has any identifiers or codes associated with it, please
-                        enter the types and the actual numbers or codes. </hint>
+                    <hint>If the author has any identifiers or codes associated with
+                        it, please enter the types and the actual numbers or codes.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1602,10 +1568,10 @@
                     <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
                     <label>Organization identifier</label>
-                    <input-type value-pairs-name="openaire_organization_identifier_types">
-                        qualdrop_value</input-type>
-                    <hint>If the organization has any identifiers or codes associated with it,
-                        please enter the types and the actual numbers or codes. </hint>
+                    <input-type value-pairs-name="openaire_organization_identifier_types">qualdrop_value</input-type>
+                    <hint>If the organization has any identifiers or codes associated with
+                        it, please enter the types and the actual numbers or codes.
+                    </hint>
                     <required></required>
                 </field>
             </row>
@@ -1629,7 +1595,6 @@
                 </field>
             </row>
         </form>
-
         <form name="owner">
             <row>
                 <field>
@@ -1646,16 +1611,21 @@
         </form>
     </form-definitions>
 
-    <form-value-pairs>
 
+
+    <form-value-pairs>
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
                 <displayed-value>ISSN</displayed-value>
                 <stored-value>issn</stored-value>
             </pair>
             <pair>
-                <displayed-value>DOI</displayed-value>
-                <stored-value>doi</stored-value>
+                <displayed-value>Other</displayed-value>
+                <stored-value>other</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>ISMN</displayed-value>
+                <stored-value>ismn</stored-value>
             </pair>
             <pair>
                 <displayed-value>Gov't Doc #</displayed-value>
@@ -1681,8 +1651,8 @@
                 <stored-value>Article</stored-value>
             </pair>
             <pair>
-                <displayed-value>Livro</displayed-value>
-                <stored-value>book</stored-value>
+                <displayed-value>Book</displayed-value>
+                <stored-value>Book</stored-value>
             </pair>
             <pair>
                 <displayed-value>Book chapter</displayed-value>
@@ -1745,12 +1715,8 @@
                 <stored-value>Technical Report</stored-value>
             </pair>
             <pair>
-                <displayed-value>Tese</displayed-value>
-                <stored-value>doctoral thesis</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Dissertação</displayed-value>
-                <stored-value>master thesis</stored-value>
+                <displayed-value>Thesis</displayed-value>
+                <stored-value>Thesis</stored-value>
             </pair>
             <pair>
                 <displayed-value>Video</displayed-value>
@@ -1768,8 +1734,12 @@
 
         <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
             <pair>
-                <displayed-value>Português</displayed-value>
+                <displayed-value>Portuguese</displayed-value>
                 <stored-value>pt</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>N/A</displayed-value>
+                <stored-value></stored-value>
             </pair>
             <pair>
                 <displayed-value>English (United States)</displayed-value>
@@ -1803,7 +1773,7 @@
                 <displayed-value>Chinese</displayed-value>
                 <stored-value>zh</stored-value>
             </pair>
-
+            
             <pair>
                 <displayed-value>Turkish</displayed-value>
                 <stored-value>tr</stored-value>
@@ -1814,13 +1784,11 @@
             </pair>
         </value-pairs>
 
-
         <!-- Openaire specific value pairs -->
 
         <value-pairs value-pairs-name="openaire_license_types" dc-term="license">
 
-            <!-- Based on:
-            http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_licensecondition.html#dc-rightslicensecondition -->
+            <!-- Based on: http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_licensecondition.html#dc-rightslicensecondition -->
 
             <pair>
                 <displayed-value>Without License</displayed-value>
@@ -1857,6 +1825,7 @@
             </pair>
 
         </value-pairs>
+
 
         <value-pairs value-pairs-name="ppg_types" dc-term="type">
             <pair>
@@ -1963,7 +1932,7 @@
         </value-pairs>
 
         <!-- OpenAIRE document types
-        https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/4.0.1/field_publicationtype.html
+             https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/4.0.1/field_publicationtype.html
              Based on COAR Vocabularies -> Controlled Vocabulary for Resource Type Genres (Version 2.0):
              http://vocabularies.coar-repositories.org/documentation/resource_types/
         -->

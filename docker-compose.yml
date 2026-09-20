@@ -45,7 +45,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
-    restart: unless-stopped
+    # restart: unless-stopped
 
   dspacedb:
     container_name: dspacedb
@@ -61,10 +61,7 @@ services:
     networks:
       dspacenet:
     ports:
-    - published: 5432
-      target: 5432
-    stdin_open: true
-    tty: true
+      - "5432:5432"
     volumes:
       - pgdata:/pgdata
     healthcheck:
@@ -72,27 +69,27 @@ services:
      interval: 10s
      timeout: 5s
      retries: 5
-    restart: unless-stopped
-
+  
   dspacesolr:
     container_name: dspacesolr
     env_file:
       - .env
+    image: "docker.io/inpa/dspace-solr:${DSPACE_VERSION}"
+    environment:
+      TZ: America/Manaus
     build:
       context: ./api/dspace/src/main/docker/dspace-solr/
+      # Provide path to Solr configs necessary to build Docker image
       additional_contexts:
         solrconfigs: ./api/dspace/solr/
       args:
         SOLR_VERSION: "${SOLR_VER:-9.8}"
-    image: "inpa/dspace-solr:${DSPACE_VERSION}"
-    environment:
-      TZ: America/Manaus
     networks:
       - dspacenet
     ports:
       - "8983:8983"
-    working_dir: /var/solr/data
     user: root
+    working_dir: /var/solr/data
     volumes:
       - solr_data:/var/solr/data
     entrypoint:
@@ -112,6 +109,8 @@ services:
         cp -r /opt/solr/server/solr/configsets/qaevent/* qaevent
         precreate-core suggestion /opt/solr/server/solr/configsets/suggestion
         cp -r /opt/solr/server/solr/configsets/suggestion/* suggestion
+        precreate-core audit /opt/solr/server/solr/configsets/audit
+        cp -r /opt/solr/server/solr/configsets/audit/* audit
         chown -R solr:solr /var/solr
         runuser -u solr -- solr-foreground
     healthcheck:
@@ -119,33 +118,6 @@ services:
       interval: 30s
       timeout: 10s
       retries: 5
-    restart: unless-stopped
-  
-  ui:
-    container_name: ui
-    environment:
-      DSPACE_UI_SSL: 'false'
-      DSPACE_UI_HOST: ui
-      DSPACE_UI_PORT: '4000'
-      DSPACE_UI_NAMESPACE: /
-      DSPACE_REST_SSL: 'true'
-      DSPACE_REST_HOST: ri.inpa.gov.br
-      DSPACE_REST_PORT: 443
-      DSPACE_REST_NAMESPACE: /server
-      TZ: America/Manaus
-    image: "inpa/angular:${DSPACE_VERSION}"
-    build:
-      context: ./ui
-      dockerfile: Dockerfile.dist
-      # dockerfile: Dockerfile
-    networks:
-      dspacenet:
-    ports:
-    - published: 4000
-      target: 4000
-    stdin_open: true
-    tty: true
-    restart: unless-stopped
 
 volumes:
   assetstore:
