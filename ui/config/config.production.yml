@@ -1,0 +1,67 @@
+rest:
+  ssl: true
+  host: ri.inpa.gov.br
+  port: 443
+  nameSpace: /server
+  ssrBaseUrl: http://api:8080/server
+
+ui:
+  ssl: true
+  host: ri.inpa.gov.br
+  port: 443
+  # Specify the public URL that this user interface responds to. This corresponds to the "dspace.ui.url" property in your backend's local.cfg.
+  # SSR is only enabled when the client's "Host" HTTP header matches this baseUrl. The baseUrl is also used for redirects and SEO links (in robots.txt).
+  baseUrl: https://ri.inpa.gov.br
+  # NOTE: Space is capitalized because 'namespace' is a reserved string in TypeScript
+  nameSpace: /
+  # The rateLimiter settings limit each IP to a 'limit' of 500 requests per 'windowMs' (1 minute).
+  rateLimiter:
+    windowMs: 60000 # 1 minute
+    limit: 500 # limit each IP to 500 requests per windowMs
+    # IPv6 subnet mask applied to IPv6 addresses.
+    # See: https://express-rate-limit.mintlify.app/reference/configuration#ipv6subnet
+    ipv6Subnet: 56
+  # Trust X-FORWARDED-* headers from proxies (default = true)
+  useProxies: true
+
+# defaultLanguage: pt-BR
+fallbackLanguage: pt-BR
+languages:
+  - code: en
+    label: English
+    active: true
+  - code: es
+    label: Español
+    active: true
+  - code: pt-BR
+    label: Português
+    active: true
+
+# Theme Config
+themes:
+  - name: inpa
+    headTags:
+    - tagName: link
+      attributes:
+        rel: icon
+        href: assets/inpa/images/favicons/favicon.ico
+        sizes: any
+    - tagName: link
+      attributes:
+        rel: icon
+        href: assets/inpa/images/favicons/favicon.svg
+        type: image/svg+xml
+    - tagName: link
+      attributes:
+        rel: apple-touch-icon
+        href: assets/inpa/images/favicons/apple-touch-icon.png
+    - tagName: link
+      attributes:
+        rel: manifest
+        href: assets/inpa/images/favicons/manifest.webmanifest
+
+info:
+  enableEndUserAgreement: true
+  enablePrivacyStatement: true
+  enableCOARNotifySupport: false
+  enableCookieConsentPopup: true
