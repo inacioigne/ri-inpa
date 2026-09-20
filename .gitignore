@@ -1,5 +1,5 @@
 .env
 local.cfg
 api-v10.0
-ui-v9.2
+ui-v10.0
 ui/package-lock.json

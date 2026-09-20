@@ -1,6 +1,5 @@
 // import { COMPONENTS as CUSTOM_THEME_EAGER_COMPONENTS } from './custom/eager-theme-components';
 import { COMPONENTS as DSPACE_THEME_EAGER_COMPONENTS } from './dspace/eager-theme-components';
-import { COMPONENTS as INPA_THEME_EAGER_COMPONENTS } from './inpa/eager-theme-components';
 
 /**
  * This list bundles the eager components from all the enable themes.
@@ -12,5 +11,4 @@ import { COMPONENTS as INPA_THEME_EAGER_COMPONENTS } from './inpa/eager-theme-co
 export const EAGER_THEME_COMPONENTS = [
   // ...CUSTOM_THEME_EAGER_COMPONENTS,
   ...DSPACE_THEME_EAGER_COMPONENTS,
-  ...INPA_THEME_EAGER_COMPONENTS,
 ];
