@@ -1,0 +1,10 @@
+@if (item.firstMetadataValue('dc.type'); as type) {
+
+<span class="badge bg-primary fs-6">
+    {{ 'type.' + slugify(type) | translate }}
+</span>
+
+}
+<h1 class="item-page-title-field">
+    <span class="dont-break-out" [dsMetadata]="nameMetadata"></span>
+</h1>
