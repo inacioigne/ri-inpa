@@ -7911,4 +7911,6 @@
   "relationships.Publication.isCoAdvisorOfPublication.Person": "Coorientador",
 
   "relationships.Publication.isRefereeOfPublication.Person": "Membros",
+
+  pt: "Português",
 }

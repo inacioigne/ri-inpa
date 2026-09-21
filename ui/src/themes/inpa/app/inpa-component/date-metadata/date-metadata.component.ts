@@ -17,6 +17,9 @@ import { ItemPageFieldComponent } from "src/app/item-page/simple/field-component
 export class DateMetadataComponent extends ItemPageFieldComponent  {
 
     @Input() item: Item;
+    get data(): string {
+        return this.item?.firstMetadataValue('dc.date.issued') ?? '';
+    }
 
 
 }

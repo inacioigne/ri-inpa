@@ -30,6 +30,7 @@ import { ThemedResultsBackButtonComponent } from '../../../../../../../app/share
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 import { AltmetricBadgeComponent } from 'src/themes/inpa/app/inpa-component/altmetric/altmetric-badge.component';
 import { DateMetadataComponent } from 'src/themes/inpa/app/inpa-component/date-metadata/date-metadata.component';
+import { LanguageMetadataComponent } from 'src/themes/inpa/app/inpa-component/language-metadata/language-metadata.component';
 
 @listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'inpa')
 @Component({
@@ -61,7 +62,8 @@ import { DateMetadataComponent } from 'src/themes/inpa/app/inpa-component/date-m
     ThemedThumbnailComponent,
     TranslateModule,
     AltmetricBadgeComponent,
-    DateMetadataComponent
+    DateMetadataComponent,
+    LanguageMetadataComponent
   ],
 })
 export class PublicationComponent extends BaseComponent {
