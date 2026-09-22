@@ -15,7 +15,7 @@ else
 fi
 
 echo "Exportando item $HANDLE..."
-if docker exec "api" bash -c "/dspace/bin/dspace export -t ITEM -d /dspace/item -n 1 -i $HANDLE"; then
+if docker exec "api" bash -c "/dspace/bin/export export -t ITEM -d /dspace/item -n 1 -i $HANDLE"; then
     echo "OK: Item exportado com sucesso."
     echo "Removendo bitstream ORIGINAL..."
     docker exec "api" bash -c "./bin/dspace itemupdate -e ri@inpa.gov.br -s ./item -D ORIGINAL"
