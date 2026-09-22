@@ -7913,4 +7913,6 @@
   "relationships.Publication.isRefereeOfPublication.Person": "Membros",
 
   pt: "Português",
+
+  "type.conference-proceedings": "Anais",
 }
