@@ -532,12 +532,12 @@
 
         <property name="defaultFilterQueries">
             <list>
-                  <value>(search.resourcetype:Item AND latestVersion:true) OR
-                    search.resourcetype:Collection OR search.resourcetype:Community</value>
+                  <!-- <value>(search.resourcetype:Item AND latestVersion:true) OR
+                    search.resourcetype:Collection OR search.resourcetype:Community</value> -->
 
-<!-- 
+
                 <value> search.resourcetype:Item AND latestVersion:true AND
-                    entityType_keyword:Person </value> -->
+                    entityType_keyword:Person </value>
 
                 <value>-withdrawn:true AND -discoverable:false</value>
 
