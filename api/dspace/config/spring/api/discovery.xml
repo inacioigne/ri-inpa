@@ -315,6 +315,8 @@
                 <!--Only find items, communities and collections-->
                 <value>(search.resourcetype:Item AND latestVersion:true) OR search.resourcetype:Collection OR search.resourcetype:Community</value>
                 <value>-withdrawn:true AND -discoverable:false</value>
+                <!-- CONFIG INPA:: Não mostrar itens desta coleção na busca global -->
+                <value>-location:mb8f7805-2b6d-42fd-8b1d-fc5f78a6ad5e</value>
             </list>
         </property>
         <!--The configuration for the recent submissions-->

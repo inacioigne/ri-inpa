@@ -9,9 +9,7 @@
   </div>
 </div>
 }
-<!-- <div class="d-flex flex-row">
-  <ds-dso-edit-menu></ds-dso-edit-menu>
-</div> -->
+
 <div class="row">
   <div class="col-12 col-md-4">
     @if (!(mediaViewer.image || mediaViewer.video)) {
@@ -71,26 +69,25 @@
     <ds-generic-item-page-field [item]="object" [fields]="['journalvolume.identifier.name']"
       [label]="'publication.page.volume-title'">
     </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.publisher']" [label]="'publication.page.publisher'">
-    </ds-generic-item-page-field>
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.doi', 'dc.relation.hasversion']"
-      [label]="'publication.page.doi'" urlRegex="^https?://">
-    </ds-generic-item-page-field>
+    <!-- <ds-generic-item-page-field [item]="object" [fields]="['dc.publisher']" [label]="'publication.page.publisher'">
+    </ds-generic-item-page-field> -->
+    <!-- <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.doi', 'dc.relation.hasversion']"
+      [label]="'publication.page.doi'" urlRegex="^https?://"> 
+    </ds-generic-item-page-field>-->
     <!-- ISBN -->
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.isbn']" label="ISBN">
-    </ds-generic-item-page-field>
+    <!-- <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.isbn']" label="ISBN">
+    </ds-generic-item-page-field> -->
 
     <!-- pages -->
-    <ds-generic-item-page-field [item]="object" [fields]="['dc.description.pages']" [label]="'publication.page.pages'">
-    </ds-generic-item-page-field>
+    <!-- <ds-generic-item-page-field [item]="object" [fields]="['dc.description.pages']" [label]="'publication.page.pages'">
+    </ds-generic-item-page-field> -->
   </div>
   <div class="col-12 col-md-7">
-    <div class="d-flex flex-row justify-content-between">
+    <div class="d-flex flex-row justify-content-between pb-2">
       <inpa-type-metadata [item]="object"></inpa-type-metadata>
       <ds-dso-edit-menu></ds-dso-edit-menu>
-
     </div>
-    
+
     <ds-item-page-title-field [item]="object" class="me-auto">
     </ds-item-page-title-field>
     <hr>
@@ -119,16 +116,26 @@
     </ds-generic-item-page-field>
     <hr>
     <!-- Icons metadatas -->
-    <div class="d-flex flex-row gap-4">
-      <inpa-date-metadata [item]="object"></inpa-date-metadata>
-      <inpa-language-metadata [item]="object"></inpa-language-metadata>
+    <div class="d-flex flex-row gap-5">
+      <inpa-icon-metadata [item]="object" [field]="'dc.date.issued'" [label]="'Data da publicação'"
+        icon="date"></inpa-icon-metadata>
+      <inpa-icon-metadata [item]="object" field="dc.language.iso" label="Idioma" icon="language"></inpa-icon-metadata>
+      <inpa-icon-metadata [item]="object" field="dc.description.pages" label="Páginas" icon="page"></inpa-icon-metadata>
+      <inpa-icon-metadata [item]="object" field="dc.identifier.isbn" label="ISBN" icon="isbn"></inpa-icon-metadata>
+      <inpa-icon-metadata [item]="object" field="dc.publisher" label="Editora" icon="publisher"></inpa-icon-metadata>
     </div>
     <hr>
-  
+
     <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.citation']" [label]="'item.page.citation'">
     </ds-generic-item-page-field>
-    <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
-    </ds-item-page-uri-field>
+    <div class="d-flex justify-content-between">
+      <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
+      </ds-item-page-uri-field>
+      <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.doi', 'dc.relation.hasversion']"
+        [label]="'publication.page.doi'" urlRegex="^https?://"> </ds-generic-item-page-field>
+
+    </div>
+
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <ds-item-page-uri-field [item]="object" [fields]="['coar.notify.endorsedBy']" [label]="'item.page.endorsement'">
     </ds-item-page-uri-field>

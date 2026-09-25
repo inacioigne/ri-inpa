@@ -16,6 +16,7 @@
   "relationships.Publication.isRefereeOfPublication.Person": "Membros",
   "repository.title": "RI INPA ::",
   "repository.title.prefix": "RI INPA :: ",
+   pt: "Português",
   "de": "Alemão",
-  "en": "Inglês",
+  "en": "Inglês", 
 }
