@@ -4,17 +4,21 @@ import { ItemPageFieldComponent } from "src/app/item-page/simple/field-component
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-    selector: 'inpa-language-metadata',
-    templateUrl: './language-metadata.component.html',
-    styleUrls: ['./language-metadata.component.scss'],
+    selector: 'inpa-type-metadata',
+    templateUrl: './type-metadata.component.html',
+    styleUrls: ['./type-metadata.component.scss'],
     imports: [
         TranslateModule],
 })
-export class LanguageMetadataComponent extends ItemPageFieldComponent {
+export class TypeMetadataComponent extends ItemPageFieldComponent {
 
     @Input() item: Item;
     get data(): string {
-        return this.item?.firstMetadataValue('dc.language.iso');
+        return this.item?.firstMetadataValue('dc.type');
+    }
+
+    public slugify(value: string): string {
+        return value.toLowerCase().trim().replace(/\s+/g, '-');
     }
 
 

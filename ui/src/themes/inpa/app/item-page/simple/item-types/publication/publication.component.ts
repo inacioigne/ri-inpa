@@ -14,7 +14,7 @@ import { ThemedMediaViewerComponent } from '../../../../../../../app/item-page/m
 import { MiradorViewerComponent } from '../../../../../../../app/item-page/mirador-viewer/mirador-viewer.component';
 import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
 import { ItemPageAbstractFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/abstract/item-page-abstract-field.component';
-import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
+// import { ItemPageDateFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/date/item-page-date-field.component';
 import { GenericItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/generic/generic-item-page-field.component';
 import { GeospatialItemPageFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/geospatial/geospatial-item-page-field.component';
 import { ThemedItemPageTitleFieldComponent } from '../../../../../../../app/item-page/simple/field-components/specific-field/title/themed-item-page-field.component';
@@ -31,6 +31,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
 import { AltmetricBadgeComponent } from 'src/themes/inpa/app/inpa-component/altmetric/altmetric-badge.component';
 import { DateMetadataComponent } from 'src/themes/inpa/app/inpa-component/date-metadata/date-metadata.component';
 import { LanguageMetadataComponent } from 'src/themes/inpa/app/inpa-component/language-metadata/language-metadata.component';
+import { TypeMetadataComponent } from 'src/themes/inpa/app/inpa-component/type-metadata/type-metadata.component';
 
 @listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'inpa')
 @Component({
@@ -47,7 +48,7 @@ import { LanguageMetadataComponent } from 'src/themes/inpa/app/inpa-component/la
     GenericItemPageFieldComponent,
     GeospatialItemPageFieldComponent,
     ItemPageAbstractFieldComponent,
-    ItemPageDateFieldComponent,
+    // ItemPageDateFieldComponent,
     ItemPageLicenseFieldComponent,
     ItemPageUriFieldComponent,
     MetadataFieldWrapperComponent,
@@ -63,7 +64,8 @@ import { LanguageMetadataComponent } from 'src/themes/inpa/app/inpa-component/la
     TranslateModule,
     AltmetricBadgeComponent,
     DateMetadataComponent,
-    LanguageMetadataComponent
+    LanguageMetadataComponent,
+    TypeMetadataComponent
   ],
 })
 export class PublicationComponent extends BaseComponent {

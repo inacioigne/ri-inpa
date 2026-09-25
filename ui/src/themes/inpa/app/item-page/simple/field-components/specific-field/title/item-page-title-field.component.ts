@@ -15,8 +15,4 @@ import { MetadataDirective } from '../../../../../../../../app/shared/metadata.d
 })
 export class ItemPageTitleFieldComponent extends BaseComponent {
 
-  public slugify(value: string): string {
-  return value.toLowerCase().trim().replace(/\s+/g, '-');
-}
-
 }

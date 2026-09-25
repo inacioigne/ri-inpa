@@ -1738,23 +1738,15 @@
                 <stored-value>pt</stored-value>
             </pair>
             <pair>
-                <displayed-value>N/A</displayed-value>
-                <stored-value></stored-value>
-            </pair>
-            <pair>
-                <displayed-value>English (United States)</displayed-value>
-                <stored-value>en_US</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>English</displayed-value>
+                <displayed-value>Inglês</displayed-value>
                 <stored-value>en</stored-value>
             </pair>
             <pair>
-                <displayed-value>Spanish</displayed-value>
+                <displayed-value>Espanhol</displayed-value>
                 <stored-value>es</stored-value>
             </pair>
             <pair>
-                <displayed-value>German</displayed-value>
+                <displayed-value>Alemão</displayed-value>
                 <stored-value>de</stored-value>
             </pair>
             <pair>
@@ -1781,6 +1773,10 @@
             <pair>
                 <displayed-value>(Other)</displayed-value>
                 <stored-value>other</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>N/A</displayed-value>
+                <stored-value></stored-value>
             </pair>
         </value-pairs>
 

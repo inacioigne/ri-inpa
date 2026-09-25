@@ -9,9 +9,9 @@
   </div>
 </div>
 }
-<div class="d-flex flex-row">
+<!-- <div class="d-flex flex-row">
   <ds-dso-edit-menu></ds-dso-edit-menu>
-</div>
+</div> -->
 <div class="row">
   <div class="col-12 col-md-4">
     @if (!(mediaViewer.image || mediaViewer.video)) {
@@ -85,6 +85,12 @@
     </ds-generic-item-page-field>
   </div>
   <div class="col-12 col-md-7">
+    <div class="d-flex flex-row justify-content-between">
+      <inpa-type-metadata [item]="object"></inpa-type-metadata>
+      <ds-dso-edit-menu></ds-dso-edit-menu>
+
+    </div>
+    
     <ds-item-page-title-field [item]="object" class="me-auto">
     </ds-item-page-title-field>
     <hr>
@@ -118,8 +124,7 @@
       <inpa-language-metadata [item]="object"></inpa-language-metadata>
     </div>
     <hr>
-    
-
+  
     <ds-generic-item-page-field [item]="object" [fields]="['dc.identifier.citation']" [label]="'item.page.citation'">
     </ds-generic-item-page-field>
     <ds-item-page-uri-field [item]="object" [fields]="['dc.identifier.uri']" [label]="'item.page.uri'">
