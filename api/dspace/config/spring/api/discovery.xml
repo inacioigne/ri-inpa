@@ -408,8 +408,8 @@
 
                 <value>-withdrawn:true AND -discoverable:false</value>
 
-                <!-- CONFIG INPA:: Não mostrar itens desta coleção na busca global -->
-                <value>-entityType_keyword:Person</value>
+                <!-- CONFIG INPA:: Não mostrar itens desta coleção na busca global 
+                <value>-entityType_keyword:Person</value>-->
             </list>
         </property>
         <!--The
