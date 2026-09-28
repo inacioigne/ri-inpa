@@ -28,10 +28,7 @@ import { listableObjectComponent } from '../../../../../../../app/shared/object-
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 import { AltmetricBadgeComponent } from 'src/themes/inpa/app/inpa-component/altmetric/altmetric-badge.component';
-// import { DateMetadataComponent } from 'src/themes/inpa/app/inpa-component/date-metadata/date-metadata.component';
-// import { LanguageMetadataComponent } from 'src/themes/inpa/app/inpa-component/language-metadata/language-metadata.component';
 import { TypeMetadataComponent } from 'src/themes/inpa/app/inpa-component/type-metadata/type-metadata.component';
-// import { PageMetadataComponent } from 'src/themes/inpa/app/inpa-component/page-metadata/page-metadata.component';
 import { IconMetadataComponent } from 'src/themes/inpa/app/inpa-component/icon-metadata/icon-metadata.component';
 
 @listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'inpa')
@@ -62,8 +59,6 @@ import { IconMetadataComponent } from 'src/themes/inpa/app/inpa-component/icon-m
     ThemedThumbnailComponent,
     TranslateModule,
     AltmetricBadgeComponent,
-    // DateMetadataComponent,
-    // LanguageMetadataComponent,
     TypeMetadataComponent,
     // PageMetadataComponent,
     IconMetadataComponent
