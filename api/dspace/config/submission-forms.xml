@@ -383,7 +383,7 @@
                     <repeatable>true</repeatable>
                     <label>Organizador</label>
                     <hint>Enter the editor's name (Family name, Given names).</hint>
-                    <type-bind>book</type-bind>
+                    <type-bind>book, report</type-bind>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -2127,7 +2127,7 @@
                 <stored-value>preprint</stored-value>
             </pair>
             <pair>
-                <displayed-value>- Report</displayed-value>
+                <displayed-value>Boletim</displayed-value>
                 <stored-value>report</stored-value>
             </pair>
             <pair>

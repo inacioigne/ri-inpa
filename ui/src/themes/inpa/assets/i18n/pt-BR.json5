@@ -5,6 +5,7 @@
   "type.journal-article": "Artigo",
   "type.letter-to-the-editor": "Carta ao editor",
   "type.conference-proceedings": "Anais",
+  "type.report": "Boletim",
   "item.page.advisor": "Orientador",
   "item.page.co-advisor": "Coorientadores",
   "item.page.abstract": "Abstract",
