@@ -19,7 +19,7 @@ import { TopLevelCommunityListComponent as BaseComponent } from '../../../../../
 export class TopLevelCommunityListComponent extends BaseComponent {
   public collections = [
      {
-      link: 'collections/704afa37-d6aa-4575-a989-95bad0c44509',
+      link: '/collections/704afa37-d6aa-4575-a989-95bad0c44509',
       image: 'assets/inpa/images/collections/info-lba.png',
       title: 'Boletim Info.LBA'
     },
