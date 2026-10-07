@@ -405,8 +405,8 @@
         <submission-process name="JournalIssue">
             <step id="collection"/>
             <step id="journalIssueStep"/>
-            <!-- <step id="upload"/>
-            <step id="license"/> -->
+            <step id="upload"/>
+            <step id="cclicense"/>
         </submission-process>
 
         <!-- Submission form used during JournalIssue editing (post-publication via EditItem system).

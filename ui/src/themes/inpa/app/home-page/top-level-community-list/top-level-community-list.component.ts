@@ -1,17 +1,14 @@
-// import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { TopLevelCommunityListComponent as BaseComponent } from '../../../../../app/home-page/top-level-community-list/top-level-community-list.component';
-// import { ThemedLoadingComponent } from '../../../../../app/shared/loading/themed-loading.component';
+
 
 @Component({
   selector: 'ds-themed-top-level-community-list',
   styleUrls: ['./top-level-community-list.component.scss'],
   templateUrl: './top-level-community-list.component.html',
   imports: [
-    // AsyncPipe,
-    // ThemedLoadingComponent,
     RouterModule
 
   ],
