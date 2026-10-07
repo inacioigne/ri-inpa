@@ -14,13 +14,12 @@ import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/m
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
-// import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
+import { ThemedFileSectionComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/themed-file-section.component';
 
 
 @listableObjectComponent('JournalIssue', ViewMode.StandalonePage, Context.Any, 'inpa')
 @Component({
   selector: 'ds-journal-issue',
-  // styleUrls: ['./journal-issue.component.scss'],
   styleUrls: ['../../../../../../../app/entity-groups/journal-entities/item-pages/journal-issue/journal-issue.component.scss'],
   templateUrl: './journal-issue.component.html',
   imports: [
@@ -34,7 +33,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
     ThemedResultsBackButtonComponent,
     ThemedThumbnailComponent,
     TranslateModule,
-    // ThemedFileSectionComponent,
+    ThemedFileSectionComponent,
   ],
 })
 export class JournalIssueComponent extends BaseComponent {
