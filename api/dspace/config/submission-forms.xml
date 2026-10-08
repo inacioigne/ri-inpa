@@ -487,7 +487,7 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>isbn</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>DOI</label>
+                    <label>ISBN</label>
                     <style>col-md-4</style>
                     <input-type>onebox</input-type>
                     <hint>Entre com ISBN do item</hint>
@@ -499,11 +499,11 @@
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>issn</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>DOI</label>
+                    <label>ISSN</label>
                     <style>col-md-4</style>
                     <input-type>onebox</input-type>
-                    <hint>Entre com ISBN do item</hint>
-                    <type-bind>article</type-bind>
+                    <hint>Entre com ISSN do item</hint>
+                    <type-bind>article, report</type-bind>
                     <required></required>
                 </field>
 
